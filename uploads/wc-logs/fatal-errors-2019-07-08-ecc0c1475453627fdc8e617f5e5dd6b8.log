@@ -1,0 +1,378 @@
+2019-07-08T06:26:40+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '__data' (T_STRING), expecting ',' or ')' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/f40d3550650de36de091ff5c605786422074809e.php:36
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/f40d3550650de36de091ff5c605786422074809e.php on line 36
+
+2019-07-08T06:27:08+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '__data' (T_STRING), expecting ',' or ')' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/f40d3550650de36de091ff5c605786422074809e.php:36
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/f40d3550650de36de091ff5c605786422074809e.php on line 36
+
+2019-07-08T06:27:19+00:00 CRITICAL Uncaught InvalidArgumentException: View [partials.testimonials] not found. in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/FileViewFinder.php:137
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/FileViewFinder.php(79): Illuminate\View\FileViewFinder->findInPaths('partials.testim...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Factory.php(128): Illuminate\View\FileViewFinder->find('partials.testim...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/f40d3550650de36de091ff5c605786422074809e.php(36): Illuminate\View\Factory->make('partials.testim...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illu in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/FileViewFinder.php on line 137
+
+2019-07-08T06:36:37+00:00 CRITICAL Uncaught Error: Class 'App\Controllers\Partials\WP_Query' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Partials/Testimonials.php:14
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php(211): App\Controllers\TemplateBoxWithFruits->all()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php(94): Sober\Controller\Controller->__setDataFromMethods()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/controller.php(69): Sober\Controller\Controller->__setData(Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(286): Sober\Controller\{closure}(Array, '/Users/ivaylosh...')
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#5 /Users/ivaylosholekov/Sites/personal/fruitaway/web/ap in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Partials/Testimonials.php on line 14
+
+2019-07-08T06:37:09+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\App::all() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:3
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\V in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 3
+
+2019-07-08T06:37:18+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\App::all() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:3
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\V in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 3
+
+2019-07-08T06:37:20+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\App::all() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:3
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\V in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 3
+
+2019-07-08T06:37:21+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\App::all() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:3
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\V in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 3
+
+2019-07-08T06:37:23+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\App::all() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:3
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\V in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 3
+
+2019-07-08T07:57:03+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Undefined class constant 'current_lang' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:7
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 7
+
+2019-07-08T08:40:21+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:35
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View. in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 35
+
+2019-07-08T08:40:33+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:35
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View. in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 35
+
+2019-07-08T08:40:47+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:35
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View. in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 35
+
+2019-07-08T08:40:48+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:35
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View. in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 35
+
+2019-07-08T08:40:56+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function App\Controllers\App::in_array_r(), 0 passed in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php on line 211 and at least 2 expected in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:11
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php(211): App\Controllers\App->in_array_r()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php(94): Sober\Controller\Controller->__setDataFromMethods()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/controller.php(69): Sober\Controller\Controller->__setData(Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(286): Sober\Controller\{closure}(Array, '/Users/ivaylosh...')
+#4 /Users/ivaylosholek in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 11
+
+2019-07-08T08:40:59+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function App\Controllers\App::in_array_r(), 0 passed in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php on line 211 and at least 2 expected in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:11
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php(211): App\Controllers\App->in_array_r()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php(94): Sober\Controller\Controller->__setDataFromMethods()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/controller.php(69): Sober\Controller\Controller->__setData(Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(286): Sober\Controller\{closure}(Array, '/Users/ivaylosh...')
+#4 /Users/ivaylosholek in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 11
+
+2019-07-08T08:41:32+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php(35): App\Controllers\App::in_array_r('en_US', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 13
+
+2019-07-08T08:41:58+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php(35): App\Controllers\App::in_array_r('en_US', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 13
+
+2019-07-08T08:43:19+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php(35): App\Controllers\App::in_array_r('en_US', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 13
+
+2019-07-08T08:43:21+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php(35): App\Controllers\App::in_array_r('en_US', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 13
+
+2019-07-08T08:43:49+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function App\Controllers\App::in_array_r(), 0 passed in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php on line 211 and at least 2 expected in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:11
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php(211): App\Controllers\App->in_array_r()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Controller.php(94): Sober\Controller\Controller->__setDataFromMethods()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/controller.php(69): Sober\Controller\Controller->__setData(Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(286): Sober\Controller\{closure}(Array, '/Users/ivaylosh...')
+#4 /Users/ivaylosholek in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 11
+
+2019-07-08T08:44:35+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php(35): App\Controllers\App::in_array_r('en_US', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 13
+
+2019-07-08T08:46:23+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php(35): App\Controllers\App::din_array_r('en_US', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 13
+
+2019-07-08T08:46:27+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function App\Controllers\in_array_r() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php(35): App\Controllers\App::din_array_r('en_US', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php(8): App\Controllers\App::testimonialsHeader()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 13
+
+2019-07-08T09:02:25+00:00 CRITICAL syntax error, unexpected '}' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 42
+
+2019-07-08T09:02:25+00:00 CRITICAL syntax error, unexpected '}' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/App.php on line 42
+
+2019-07-08T10:07:08+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\TemplateBoxWithFruits::get() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:4
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 4
+
+2019-07-08T10:07:13+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\TemplateBoxWithFruits::get() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:4
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 4
+
+2019-07-08T10:07:14+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\TemplateBoxWithFruits::get() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:4
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 4
+
+2019-07-08T10:10:10+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\TemplateBoxWithFruits::get() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:4
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 4
+
+2019-07-08T10:10:12+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\TemplateBoxWithFruits::get() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:4
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 4
+
+2019-07-08T10:10:21+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method App\Controllers\TemplateBoxWithFruits::get() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php:4
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1020ef2b529471fe24d00a965410a931fae79b64.php on line 4
+
+2019-07-08T11:46:34+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'else' (T_ELSE) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:29
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php(58 in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 29
+
+2019-07-08T11:47:25+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endif' (T_ENDIF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:29
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php( in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 29
+
+2019-07-08T11:47:40+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'else' (T_ELSE) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:29
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php(58 in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 29
+
+2019-07-08T11:48:36+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'else' (T_ELSE) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:29
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php(58 in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 29
+
+2019-07-08T13:27:37+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:41
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 41
+
+2019-07-08T13:27:39+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:41
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 41
+
+2019-07-08T13:27:41+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:41
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 41
+
+2019-07-08T13:27:42+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:41
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 41
+
+2019-07-08T13:29:35+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:41
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 41
+
+2019-07-08T13:32:24+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:42
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 42
+
+2019-07-08T13:33:49+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:42
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 42
+
+2019-07-08T13:33:51+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:42
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 42
+
+2019-07-08T13:34:14+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php:42
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/3594f40517a0bdbc81322ac0f38550346f8169f4.php on line 42
+
+2019-07-08T14:40:45+00:00 CRITICAL Uncaught ReflectionException: Class App\Controllers\TemplateSubscription.1 does not exist in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php:121
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php(121): ReflectionClass->__construct('App\\Controllers...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php(49): Sober\Controller\Loader->setClassesAlias()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/controller.php(41): Sober\Controller\Loader->__construct(Object(Brain\Hierarchy\Hierarchy))
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(286): Sober\Controller\loader('')
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/ivaylosholekov/Sites/personal/ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php on line 121
+
+2019-07-08T14:40:45+00:00 CRITICAL Uncaught ReflectionException: Class App\Controllers\TemplateSubscription.1 does not exist in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php:121
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php(121): ReflectionClass->__construct('App\\Controllers...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php(49): Sober\Controller\Loader->setClassesAlias()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/controller.php(41): Sober\Controller\Loader->__construct(Object(Brain\Hierarchy\Hierarchy))
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(286): Sober\Controller\loader('')
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/ivaylosholekov/Sites/personal/ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php on line 121
+
+2019-07-08T14:40:53+00:00 CRITICAL Uncaught ReflectionException: Class App\Controllers\TemplateSubscription.1 does not exist in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php:121
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php(121): ReflectionClass->__construct('App\\Controllers...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php(49): Sober\Controller\Loader->setClassesAlias()
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/controller.php(41): Sober\Controller\Loader->__construct(Object(Brain\Hierarchy\Hierarchy))
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(286): Sober\Controller\loader('')
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters(NULL, Array)
+#5 /Users/ivaylosholekov/Sites/personal/ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/soberwp/controller/src/Loader.php on line 121
+
+2019-07-08T14:45:53+00:00 CRITICAL Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/9ba4a74cb56ca35f8e556c61fc3e334b01b75c4f.php on line 14
+
