@@ -9,19 +9,21 @@
       <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       <?php if( isset($categories) && $categories ): ?>
         <div>
-        <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $term_id): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $term_id): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <?php $term = get_term_by('id', $term_id, 'product_cat'); ?>
             <a class="d-block" data-href="#<?php echo e(get_term_link( $term )); ?>"><?php echo e($term->name); ?></a>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
 
-        <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $term_id): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-          <div class="mb-5 border p-5">
-            <?php $term = get_term_by('id', $term_id, 'product_cat'); ?>
-            <?php echo do_shortcode("[products category='$term->slug' columns=3]"); ?>
+        <div>
+          <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $term_id): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <div class="mb-5 border p-5">
+              <?php $term = get_term_by('id', $term_id, 'product_cat'); ?>
+              <?php echo do_shortcode("[products category='$term->slug' columns=3]"); ?>
 
-          </div>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </div>
+          <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+        </div>
       <?php endif; ?>
     <?php endif; ?>
 
