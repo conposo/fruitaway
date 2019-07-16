@@ -6,10 +6,12 @@
       <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
       <?php echo $__env->make('partials.content-page', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <?php else: ?>
-      <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-      <?php if($cta_header): ?>
-        <a href="<?php echo esc_url( get_permalink($cta_header) ); ?>" class="btn-deco btn-deco-green"><?php _e('НАПРАВИ СИ САМ', 'f4y') ?></a>
-      <?php endif; ?>
+      <div class="d-flex justify-content-between align-items-center">
+        <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php if($cta_header): ?>
+          <a href="<?php echo esc_url( get_permalink($cta_header) ); ?>" class="btn-deco btn-deco-green"><?php _e('НАПРАВИ СИ САМ', 'f4y') ?></a>
+        <?php endif; ?>
+      </div>
 
       <?php if( isset($has_sidebar) && $has_sidebar ): ?>
         <?php $terms = get_field('categories'); ?>

@@ -44,7 +44,8 @@ add_action('after_setup_theme', function () {
      * @link https://developer.wordpress.org/reference/functions/register_nav_menus/
      */
     register_nav_menus([
-        'primary_navigation' => __('Primary Navigation', 'sage')
+        'primary_navigation' => __('Primary Navigation', 'sage'),
+        'blog_navigation' => __('Blog Navigation', 'sage'),
     ]);
 
     /**
@@ -143,13 +144,28 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
     add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 }
 
-if( function_exists('acf_add_options_page') ) {
-	$option_page = acf_add_options_page(array(
+if( function_exists('acf_add_options_page') )
+{
+	// $option_page = acf_add_options_page(array(
+	// 	'page_title' 	=> 'Theme General Settings',
+	// 	'menu_title' 	=> 'Theme Settings',
+	// 	'menu_slug' 	=> 'theme-general-settings',
+	// 	'capability' 	=> 'edit_posts',
+	// 	'redirect' 	=> false
+    // ));
+    $parent = acf_add_options_page(array(
 		'page_title' 	=> 'Theme General Settings',
 		'menu_title' 	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability' 	=> 'edit_posts',
-		'redirect' 	=> false
+		'redirect' 		=> false
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Header Settings',
+		'menu_title' 	=> 'Header',
+		'parent_slug' 	=> $parent['menu_slug'],
+	));
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Footer Settings',
+		'menu_title' 	=> 'Footer',
+		'parent_slug' 	=> $parent['menu_slug'],
 	));
 }
- 

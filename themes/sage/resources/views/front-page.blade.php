@@ -27,7 +27,7 @@
                                 @php
                                     $image_id = get_sub_field('image');
                                 @endphp
-                                {{ wp_get_attachment_image( $image_id, ['700', '600'], "", ["class" => "img-responsive"] ) }}
+                                {!! wp_get_attachment_image( $image_id, ['700', '600'], "", ["class" => "img-responsive"] ) !!}
                             </div>
                         </div>
                     </div>

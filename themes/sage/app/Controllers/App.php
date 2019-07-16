@@ -9,6 +9,15 @@ class App extends Controller
     use Partials\Testimonials;
     protected $acf = true;
 
+    public static function logo($size, $action)
+    {
+        if('print' == $action)
+        {
+            $image = wp_get_attachment_image( get_field('logo', 'options')[$size], '', '', ['alt' => 'Logo '.get_bloginfo('name', 'display')] );
+        }
+
+        return $image;
+    }
     // Common Settings Field
     // public static function show_the_content()
     // {

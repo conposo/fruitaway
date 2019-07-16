@@ -12,10 +12,12 @@
       @include('partials.page-header')
       @include('partials.content-page')
     @else
-      @include('partials.page-header')
-      @if($cta_header)
-        <a href="<?php echo esc_url( get_permalink($cta_header) ); ?>" class="btn-deco btn-deco-green"><?php _e('НАПРАВИ СИ САМ', 'f4y') ?></a>
-      @endif
+      <div class="d-flex justify-content-between align-items-center">
+        @include('partials.page-header')
+        @if($cta_header)
+          <a href="<?php echo esc_url( get_permalink($cta_header) ); ?>" class="btn-deco btn-deco-green"><?php _e('НАПРАВИ СИ САМ', 'f4y') ?></a>
+        @endif
+      </div>
 
       @if( isset($has_sidebar) && $has_sidebar )
         @php $terms = get_field('categories'); @endphp

@@ -25,7 +25,7 @@
                                 <?php
                                     $image_id = get_sub_field('image');
                                 ?>
-                                <?php echo e(wp_get_attachment_image( $image_id, ['700', '600'], "", ["class" => "img-responsive"] )); ?>
+                                <?php echo wp_get_attachment_image( $image_id, ['700', '600'], "", ["class" => "img-responsive"] ); ?>
 
                             </div>
                         </div>
