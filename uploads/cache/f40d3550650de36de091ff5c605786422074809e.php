@@ -8,12 +8,12 @@
     <?php endif; ?>
     
     <!-- Product -->
-    <?php if( isset($the_product) && $the_product ): ?>
+    <?php if( isset($the_product_id) && $GLOBALS['the_product_id'] = $the_product_id ): ?>
     <section class="container my-5">
 	    <div class="row">
 		    <div class="col">
           <?php global $product; ?>
-          <?php echo do_shortcode("[product_page id='$the_product']"); ?>
+          <?php echo do_shortcode("[product_page id='$the_product_id']"); ?>
 
           <?php if( $fruits_in_the_box ): ?>
             <?php if( $fruits_in_the_box->section_with_fruits ): ?>

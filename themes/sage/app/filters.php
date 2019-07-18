@@ -89,3 +89,56 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+
+
+// Makes sure the plugin is defined before trying to use it
+if ( ! function_exists( 'is_plugin_active_for_network' ) ) {
+    require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
+}
+
+$plugin_woo = 'woocommerce/woocommerce.php';
+if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo ) ) {
+    add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+}
+
+add_filter( 'the_content', function( $content ) {
+    $formatted_content = $content;
+    if ( is_singular('post') && has_post_thumbnail()) {
+        $featuredimage = get_the_post_thumbnail(get_the_ID(), 'full', ['class' => 'w-100 h-auto']);
+        $title = get_the_title();
+        $authorimage = get_avatar( get_the_author_meta( 'ID' ), 50 );
+        $authorname = get_the_author_meta('display_name');
+        $postdate = get_the_date('d.m.Y');
+        $formatted_content = '
+        <div class="col-12">
+            <h1 class="my-5">'.$title.'</h1>'
+            . $featuredimage . '
+            <div class="author-box d-flex align-items-center">
+                '. $authorimage . '
+                <p>
+                '.__('Author').': '. $authorname .'<br>
+                ' . $postdate.'
+                </p>
+            </div>
+        </div>
+        <div class="col-12 col-md-10 pb-5">' . $content . '</div>';
+    }
+
+    return $formatted_content;
+});
+
+
+/*
+* Print Short Description for Product with Variations // (for now only for "Box with seasoned fruits")
+*/
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );    
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 30 );
+
+
+
+/**
+ * Remove related products output
+ */
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cart_totals', 10 );

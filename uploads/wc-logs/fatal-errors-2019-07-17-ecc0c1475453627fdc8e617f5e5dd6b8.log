@@ -1,0 +1,385 @@
+2019-07-17T10:23:25+00:00 CRITICAL syntax error, unexpected '}', expecting function (T_FUNCTION) or const (T_CONST) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateGiftBaskets.php on line 12
+
+2019-07-17T10:23:28+00:00 CRITICAL syntax error, unexpected '}' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateGiftBaskets.php on line 12
+
+2019-07-17T10:23:28+00:00 CRITICAL syntax error, unexpected '}' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateGiftBaskets.php on line 12
+
+2019-07-17T10:23:29+00:00 CRITICAL syntax error, unexpected '}' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateGiftBaskets.php on line 12
+
+2019-07-17T10:23:29+00:00 CRITICAL syntax error, unexpected '}' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateGiftBaskets.php on line 12
+
+2019-07-17T10:25:13+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/9ba4a74cb56ca35f8e556c61fc3e334b01b75c4f.php:30
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/perso in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/9ba4a74cb56ca35f8e556c61fc3e334b01b75c4f.php on line 30
+
+2019-07-17T10:25:14+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/9ba4a74cb56ca35f8e556c61fc3e334b01b75c4f.php:30
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/perso in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/9ba4a74cb56ca35f8e556c61fc3e334b01b75c4f.php on line 30
+
+2019-07-17T12:54:14+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php:39
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 39
+
+2019-07-17T12:54:19+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Cannot use object of type stdClass as array in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php:39
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\Vie in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 39
+
+2019-07-17T12:54:53+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php:36
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 36
+
+2019-07-17T12:55:26+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '}' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php:32
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php(58): Illuminat in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 32
+
+2019-07-17T13:03:01+00:00 CRITICAL Object of class stdClass could not be converted to string in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 28
+
+2019-07-17T13:04:17+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php:53
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blad in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 53
+
+2019-07-17T13:04:20+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php:55
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 55
+
+2019-07-17T13:04:23+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php:55
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 55
+
+2019-07-17T13:04:24+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php:55
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/91b5f4db9488409991b6afbbd399e6e0d3fa46a9.php on line 55
+
+2019-07-17T13:38:15+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected ')', expecting ',' or ';' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/9d4f4d67584debda4b9000c6692fb9a0ebf44cd3.php:72
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/c0d40266e5687745d60860a9e2e1eda in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/9d4f4d67584debda4b9000c6692fb9a0ebf44cd3.php on line 72
+
+2019-07-17T14:22:19+00:00 CRITICAL Cannot redeclare mailchimp_environment_variables() (previously declared in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/mu-plugins/mailchimp-for-woocommerce/bootstrap.php:89) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/plugins/mailchimp-for-woocommerce/bootstrap.php on line 101
+
+2019-07-17T14:22:21+00:00 CRITICAL Cannot redeclare mailchimp_environment_variables() (previously declared in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/mu-plugins/mailchimp-for-woocommerce/bootstrap.php:89) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/plugins/mailchimp-for-woocommerce/bootstrap.php on line 101
+
+2019-07-17T14:22:21+00:00 CRITICAL Cannot redeclare mailchimp_environment_variables() (previously declared in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/mu-plugins/mailchimp-for-woocommerce/bootstrap.php:89) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/plugins/mailchimp-for-woocommerce/bootstrap.php on line 101
+
+2019-07-17T15:39:40+00:00 CRITICAL syntax error, unexpected '}', expecting function (T_FUNCTION) or const (T_CONST) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateBlog.php on line 12
+
+2019-07-17T15:39:42+00:00 CRITICAL Multiple access type modifiers are not allowed in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateBlog.php on line 11
+
+2019-07-17T15:39:44+00:00 CRITICAL Multiple access type modifiers are not allowed in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateBlog.php on line 11
+
+2019-07-17T15:39:44+00:00 CRITICAL Multiple access type modifiers are not allowed in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/TemplateBlog.php on line 11
+
+2019-07-17T15:41:18+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:41:32+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:41:59+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:42:16+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:42:17+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:42:24+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:42:38+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:42:41+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:43:22+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function the_query() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->re in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:43:42+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Class 'Blog' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:46
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+# in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 46
+
+2019-07-17T15:43:47+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Controllers\WP_Query' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php(46): App\Controllers\Home::the_query('%d0%b7%d0%b4%d1...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php on line 13
+
+2019-07-17T15:43:52+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Controllers\WP_Query' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php(46): App\Controllers\Home::the_query('%d0%b7%d0%b4%d1...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php on line 13
+
+2019-07-17T15:44:03+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Controllers\WP_Query' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php(46): App\Controllers\Home::the_query('%d0%b7%d0%b4%d1...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php on line 13
+
+2019-07-17T15:44:04+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Controllers\WP_Query' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php(46): App\Controllers\Home::the_query('%d0%b7%d0%b4%d1...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php on line 13
+
+2019-07-17T15:44:05+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Controllers\WP_Query' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php(46): App\Controllers\Home::the_query('%d0%b7%d0%b4%d1...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php on line 13
+
+2019-07-17T15:44:06+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Controllers\WP_Query' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php(46): App\Controllers\Home::the_query('%d0%b7%d0%b4%d1...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php on line 13
+
+2019-07-17T15:44:08+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Controllers\WP_Query' not found in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php:13
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php(46): App\Controllers\Home::the_query('%d0%b7%d0%b4%d1...')
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include('/Users/ivaylosh...')
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/Controllers/Home.php on line 13
+
+2019-07-17T15:44:23+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to a member function have_posts() on null in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:47
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 47
+
+2019-07-17T15:44:59+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '<' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:48
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php(58): Illuminat in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 48
+
+2019-07-17T15:45:00+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting end of file in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:62
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 62
+
+2019-07-17T15:45:04+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:62
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blad in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 62
+
+2019-07-17T15:45:10+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:62
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blad in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 62
+
+2019-07-17T15:45:11+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:62
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blad in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 62
+
+2019-07-17T15:52:45+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/wp-db.php on line 2007
+
+2019-07-17T15:52:52+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /Users/ivaylosholekov/Sites/personal/fruitaway/web/wp/wp-includes/functions.php on line 1909
+
+2019-07-17T15:53:45+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined function delicious_recent_posts() in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php:45
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/PhpEngine.php(43): include()
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\ in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/1dedf57f27fdc58fab858ca69c765f24d6b3bf3c.php on line 45
+
+2019-07-17T16:04:15+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '<' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php:16
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php(58): Illuminat in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php on line 16
+
+2019-07-17T16:04:22+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '/' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php:16
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php(58): Illuminat in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php on line 16
+
+2019-07-17T16:04:26+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected '<' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php:16
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/roots/sage-lib/Template/Blade.php(58): Illuminat in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php on line 16
+
+2019-07-17T16:04:29+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'blog_navigation' (T_STRING), expecting ',' or ')' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php:26
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/r in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php on line 26
+
+2019-07-17T16:04:33+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'blog_navigation' (T_STRING), expecting ',' or ')' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php:26
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/r in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php on line 26
+
+2019-07-17T16:04:33+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected 'blog_navigation' (T_STRING), expecting ',' or ')' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php:26
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/r in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/478c75399cd73be1a95eeb168eb22b10ee0c229d.php on line 26
+
+2019-07-17T16:12:48+00:00 CRITICAL syntax error, unexpected 'wpsites_featured_image_before_' (T_STRING), expecting '(' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 93
+
+2019-07-17T16:12:48+00:00 CRITICAL syntax error, unexpected 'wpsites_featured_image_before_' (T_STRING), expecting '(' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 93
+
+2019-07-17T16:15:30+00:00 CRITICAL syntax error, unexpected 'full' (T_STRING) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 103
+
+2019-07-17T16:15:32+00:00 CRITICAL syntax error, unexpected 'full' (T_STRING) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 103
+
+2019-07-17T16:15:33+00:00 CRITICAL syntax error, unexpected 'full' (T_STRING) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 103
+
+2019-07-17T16:17:15+00:00 CRITICAL syntax error, unexpected '>' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 106
+
+2019-07-17T18:30:59+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 108
+
+2019-07-17T18:31:02+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 108
+
+2019-07-17T18:31:02+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/app/filters.php on line 108
+
+2019-07-17T18:32:43+00:00 CRITICAL Uncaught Symfony\Component\Debug\Exception\FatalThrowableError: syntax error, unexpected ')' in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/4efd2544ba4df4718f2ab76521c2d313bbfdf54b.php:5
+Stack trace:
+#0 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/Users/ivaylosh...', Array)
+#1 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(142): Illuminate\View\Engines\CompilerEngine->get('/Users/ivaylosh...', Array)
+#2 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(125): Illuminate\View\View->getContents()
+#3 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/themes/sage/vendor/illuminate/view/View.php(90): Illuminate\View\View->renderContents()
+#4 /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/c0d40266e5687745d60860a9e2e1eda251fb7bb8.php(6): Illum in /Users/ivaylosholekov/Sites/personal/fruitaway/web/app/uploads/cache/4efd2544ba4df4718f2ab76521c2d313bbfdf54b.php on line 5
+

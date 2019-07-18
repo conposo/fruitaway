@@ -1,0 +1,54 @@
+.fruits-in-box {
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 14px;
+  }
+  .fruit {
+    title {
+      font-size: 13px;
+    }
+  }
+}
+
+.info-section-2-col {
+  img {
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      right: 0;
+      top: -150px;
+      bottom: 0;
+      width: auto;
+      height: 150%;
+      max-width: 10000px;
+    }
+  }
+  p {
+    @include media-breakpoint-up(sm) {
+      font-size: 22px;
+    }
+  }
+}
+
+.wpcf7 {
+  & label{
+    font-family: $montserrat;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  & input, textarea {
+    width: 100%;
+  }
+
+  & input, button, select, optgroup, textarea {
+    border: 1px solid #D3D3D3;
+  }
+
+  & input[type=submit] {
+    @extend .btn-deco;
+    @extend .btn-deco-red;
+  }
+}

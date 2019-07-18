@@ -1,14 +1,18 @@
-@extends('layouts.app')
+@extends('layouts.app-fluid')
 
 @section('content')
   <article id="primary" class="content-area">
     <div class="container-fluid post-bg"></div>
-    <div class="container site-content" id="content" role="main">
-      @while(have_posts()) @php the_post() @endphp
-        @include('partials.content-single-'.get_post_type())
-      @endwhile
-      <?php get_template_part( 'templates/partials/social-sharing' ); ?></div></div><!-- Closing Row and Col - View theme-setup -->
-    </div><!-- #content -->
+      <div class="container site-content" id="content" role="main">
+        <div class="row post-container mx-auto">
+          @while(have_posts()) @php the_post() @endphp
+            @php the_content() @endphp
+          @endwhile
+          <div class="col-12 col-md-2 pb-5">
+            @include( 'partials.social-sharing' )
+          </div>
+        </div>
+      </div><!-- #content -->
     <div class="container-fluid rp-bg">
         <div class="container pt-5 pb-5">
             <div class="row justify-content-center pb-5">

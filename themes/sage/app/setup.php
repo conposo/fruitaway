@@ -132,18 +132,6 @@ add_action('after_setup_theme', function () {
     });
 });
 
-
-// Makes sure the plugin is defined before trying to use it
-if ( ! function_exists( 'is_plugin_active_for_network' ) ) {
-    require_once( ABSPATH . '/wp-admin/includes/plugin.php' );
-}
-
-$plugin_woo = 'woocommerce/woocommerce.php';
-if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo ) )
-{
-    add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
-}
-
 if( function_exists('acf_add_options_page') )
 {
 	// $option_page = acf_add_options_page(array(

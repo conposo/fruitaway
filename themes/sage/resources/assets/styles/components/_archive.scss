@@ -1,0 +1,72 @@
+
+.blog,
+.category {
+	main .navbar {
+		li {
+            @include media-breakpoint-down(xs) {
+                margin: 5px 1rem 5px 0 !important;
+            }
+
+			&:first-child {
+				margin-left: 0 !important;
+			}
+            &.current-menu-item {
+                border-bottom: 3px dotted $brand-primary-color;
+            }
+		}
+	}
+
+	header,
+	.navbar,
+	.pink-bg {
+		background-color: $brand-secondary-color;
+	}
+
+	.post-thumbnail {
+		max-width: 100%;
+		width: auto;
+		box-sizing: border-box;
+		text-align: center;
+		background: #fff;
+		overflow: hidden;
+		position: relative;
+		height: 100px;
+	
+		a {
+			display: block;
+			width: auto;
+			height: 100px;
+		}
+	
+		img {
+			margin: auto;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: auto;
+		}
+	
+		@include media-breakpoint-up(md) {
+			height: 170px;
+		
+			a {
+				height: 170px;
+			}
+		}
+	}
+
+    .pt-content {
+        p {
+			font-family: $montserrat;
+			font-size: 13px;
+			&:first-child {
+				font-size: 10px;
+				font-weight: 700;
+			}
+		}
+	}
+}
+

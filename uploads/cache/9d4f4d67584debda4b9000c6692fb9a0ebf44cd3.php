@@ -24,32 +24,40 @@
         </div>
     </div>
 
-    <div class="row border-bottom pt-3 pb-3">
-        <div class="col">
+    <div class="row border-bottom py-3">
+        <div class="col-6 col-md">
             <?php echo App::logo('big', 'print'); ?>
 
         </div>
-        <div class="col">
+        <div class="col-6 col-md">
             <h3><?php echo e(get_field('sections', 'options')['products']['title']); ?></h3>
             <?php $links = get_field('sections', 'options')['products']['links'] ?>
-            <?php $__currentLoopData = $links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <a href="<?php echo e($link['item']['url']); ?>">
-                    <?php echo $link['item']['title']; ?>
+            <ul>
+                <?php $__currentLoopData = $links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li>
+                    <a href="<?php echo e($link['item']['url']); ?>">
+                        <?php echo $link['item']['title']; ?>
 
-                </a>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </a>
+                </li>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </ul>
         </div>
-        <div class="col">
+        <div class="col-6 col-md">
             <h3><?php echo e(get_field('sections', 'options')['info']['title']); ?></h3>
             <?php $links = get_field('sections', 'options')['info']['links'] ?>
-            <?php $__currentLoopData = $links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <a href="<?php echo e($link['item']['url']); ?>">
-                    <?php echo $link['item']['title']; ?>
+            <ul>
+                <?php $__currentLoopData = $links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                <li>
+                    <a href="<?php echo e($link['item']['url']); ?>">
+                        <?php echo $link['item']['title']; ?>
 
-                </a>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </a>
+                </li>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            </ul>
         </div>
-        <div class="col">
+        <div class="contact-with-us col-6 col-md">
             <h3><?php echo e(get_field('sections', 'options')['contacts']['title']); ?></h3>
             <?php $links = get_field('sections', 'options')['contacts']['links'] ?>
             <?php $__currentLoopData = $links; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -59,10 +67,10 @@
                 </a>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         </div>
-        <div class="col-5">
+        <div class="newsletter col-6 col-md-5 ">
             <h3><?php echo get_field('sections', 'options')['newsletter']['title']; ?></h3>
             <div><?php echo do_shortcode(get_field('sections', 'options')['newsletter']['form']); ?></div>
-            <p><?php echo e(get_field('sections', 'options')['newsletter']['promise']); ?></p>
+            <p class="text-center"><?php echo e(get_field('sections', 'options')['newsletter']['promise']); ?></p>
         </div>
     </div>
     <div class="row bottom-line pt-3 pb-3">

@@ -4,4 +4,66 @@
 
 .banner .nav a {
   @extend .nav-link;
+  color: #2A191F;
+}
+
+.navbar {
+  font-size: $font-size-sm;
+  background: $white;
+  z-index: 2;
+
+  @include media-breakpoint-up(md) {
+    .home & .navbar-brand img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+
+// Unchecked
+// Unchecked
+// Unchecked
+.navbar {
+
+  .blog &.categories .container, .category &.categories .container{
+    border: 2px dashed $text-gray;
+    border: 2px dotted #2A191F;
+    border-radius: 10px;
+  }
+
+  &.categories {
+    z-index: 1;
+  }
+
+  @include media-breakpoint-up(md) {
+    .blog &.categories .container, .category &.categories .container {
+      border: none;
+      border-radius: 0;
+      padding: 0;
+    }
+  }
+}
+
+.navbar-toggler {
+  border: none;
+
+  .blog .categories &, .category .categories & {
+
+    // border: 2px dashed $text-gray;
+  }
+}
+
+.current-menu-item a.nav-link {
+  border-bottom: 3px dotted $brand-primary-color;
+}
+
+.navbar-brand img {
+  width: 115px;
+  height: auto;
+
+  @include media-breakpoint-up(md) {
+    width: 125px;
+  }
 }

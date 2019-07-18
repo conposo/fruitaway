@@ -9,43 +9,43 @@
 
     <!-- Main Section -->
     <?php if( isset($show_main_section) && $show_main_section ): ?>
-    <div class="mb-5 pb-5 container product-det">
+    <div class="mb-md-5 pb-5 container product-det">
       <div class="row pt-5 pb-5">
+        <?php if($main_section->content): ?>
         <div class="col-12 col-md-6">
-          <?php if($main_section->content): ?>
             <?php echo $main_section->content; ?>
 
-          <?php endif; ?>
-        </div>
-        <div class="col-12 col-md-6 product-special-image">
-          <?php if( $images = $main_section->gallery ): ?>
+          </div>
+        <?php endif; ?>
+        <?php if( $images = $main_section->gallery ): ?>
+          <div class="col-12 col-md-6 product-special-image">
             <div id="carousel_images" class="h-100 carousel carousel-fade slide" data-ride="carousel">
                 <script>
-                $(document).ready(function(){
+                jQuery(document).ready(function(){
                     var lis = ``;
-                    $('#woo-product-gallery-carousel > div:first-child').addClass('active');
+                    jQuery('#woo-product-gallery-carousel > div:first-child').addClass('active');
 
-                    $('#woo-product-gallery-carousel .carousel-item').each(function(i){
+                    jQuery('#woo-product-gallery-carousel .carousel-item').each(function(i){
                         if(i == 0) active = 'active'; else active = ``;
                         lis += `<li style="width:16px; height:16px;" data-target="#carousel_images" data-slide-to="${i}" class="${active} bg-success mx-2 rounded-circle"></li>`
                     })
-                    $('#carousel_images').prepend(`<ol class="carousel-indicators" style="bottom: -100px;">`+lis+`</ol>`)
+                    jQuery('#carousel_images').prepend(`<ol class="carousel-indicators">`+lis+`</ol>`)
                 })
                 </script>
-                <figure id="woo-product-gallery-carousel" class="carousel-inner h-100" style="overflow: unset;">
+                <figure id="woo-product-gallery-carousel" class="m-0 carousel-inner h-100" style="overflow: unset;">
                     <?php $__currentLoopData = $images; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $image): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                       <?php
                         ($image === reset($images)) ? $active = 'active' : $active = '';
                       ?>
                       <div class="carousel-item <?php echo e($active); ?>">
-                        <?php echo wp_get_attachment_image( $image->ID, 'medium', '', ['class' => 'd-block w-100'] ); ?>
+                        <?php echo wp_get_attachment_image( $image->ID, 'full', '', ['class' => 'd-block w-100'] ); ?>
 
                       </div>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </figure>
             </div>
-            <?php endif; ?>
-        </div>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
     <?php endif; ?>

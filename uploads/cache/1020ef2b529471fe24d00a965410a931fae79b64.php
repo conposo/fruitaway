@@ -1,5 +1,5 @@
 
-    <div class="testimonials-wrapper my-5 py-5 bg-success container-fluid position-relative">
+    <div class="testimonials-wrapper mb-5 mb-md-0 py-5 bg-success container-fluid position-relative">
     <?php
         $testimonials = App::get(App::testimonialsNumber());
     ?>
@@ -14,7 +14,7 @@
                     <?php $counter = 1; ?>
                     <?php while($testimonials->have_posts()): ?> <?php $testimonials->the_post(); ?>
                     <div class="carousel-item <?php if($counter == 1): ?> active <?php endif; ?>">
-                        <div class="row">
+                        <div class="row flex-column flex-md-row align-items-center">
                             <div class="col-4 text-md-right">
                                 <?php if( $_image = get_post_thumbnail_id( get_the_ID() ) ): ?>
                                 <figure>

@@ -1,8 +1,8 @@
 <header class="banner navbar navbar-expand-md navbar-white" role="navigation">
   <div class="container">
 
-    <a class="brand navbar-brand" href="<?php echo e(home_url('/')); ?>">
-      <?php if(is_front_page()): ?>
+    <a class="mr-0 brand navbar-brand position-relative" href="<?php echo e(home_url('/')); ?>">
+      <?php if(is_front_page() && !wp_is_mobile()): ?>
         <?php echo App::logo('big', 'print'); ?>
 
       <?php else: ?>
@@ -10,6 +10,9 @@
 
       <?php endif; ?>
     </a>
+    <button class="ml-auto mr-0 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span><?php echo wp_get_attachment_image( get_field('menu_icon_id', 'options') ); ?></span>
+    </button>
 
     <nav class="nav-primary">
       <?php if(has_nav_menu('primary_navigation')): ?>
@@ -19,21 +22,22 @@
           'depth' => 2,
           'container' => 'div',
           'container_class' => 'collapse navbar-collapse',
-          'container_id' => 'bs-example-navbar-collapse-1',
-          'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+          'container_id' => 'navbar-collapse',
           ]); ?>
 
       <?php endif; ?>
     </nav>
 
-    <a class="d-none d-md-block d-lg-block d-xl-block" href="<?= wc_get_cart_url(); ?>">
+    <a id="go_to_cart" class="text-right d-none d-md-block" href="<?= wc_get_cart_url(); ?>">
       <?php echo wp_get_attachment_image( get_field('basket_icon_id', 'options'), [32, 32] ); ?>
 
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-        <span><?php echo wp_get_attachment_image( get_field('menu_icon_id', 'options') ); ?></span>
-    </button>
+    <script>
+    jQuery(document).ready(function(){
+      jQuery('#go_to_cart').width( jQuery('.brand img').width() )
+    });
+    </script>
 
   </div>
 </header>

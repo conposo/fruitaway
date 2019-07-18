@@ -14,12 +14,12 @@
     @endif
     
     <!-- Product -->
-    @if( isset($the_product) && $the_product )
+    @if( isset($the_product_id) && $GLOBALS['the_product_id'] = $the_product_id )
     <section class="container my-5">
 	    <div class="row">
 		    <div class="col">
           @php global $product; @endphp
-          {!! do_shortcode("[product_page id='$the_product']") !!}
+          {!! do_shortcode("[product_page id='$the_product_id']") !!}
           @if( $fruits_in_the_box )
             @if( $fruits_in_the_box->section_with_fruits )
               @include('partials.fruits_in_the_box.section_with_fruits', ['fruits_in_the_box' => $fruits_in_the_box])

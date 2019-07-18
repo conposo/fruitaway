@@ -1,0 +1,283 @@
+
+.home {
+	section {
+		h1 {
+			color:#2a191f;
+			font-weight: 700;
+			font-size: 18px;
+
+			@include media-breakpoint-up(sm) {
+				font-size: 34px;
+			}
+		}
+		span {
+			color:#2a191f;
+			font-size: 18px;
+
+			@include media-breakpoint-up(sm) {
+				font-size: 34px;
+			}
+
+		}
+		a {
+			font-size: 11px;
+
+			@include media-breakpoint-up(sm) {
+				font-size: 17px;
+			}
+		}
+		img {
+			height: 100%;
+			width: auto;
+			max-width: 2560px;
+		}
+
+		.container {
+			height: 100%;
+			// @include media-breakpoint-down(xs) {
+			// }
+		}
+
+		.container-inner {
+			@include media-breakpoint-up(md) {
+				align-items: center !important;
+				height: 100%;
+			}
+			div + div {
+				height: 100%;
+			}
+		}
+		
+		.content {
+			text-align: center;
+
+			@include media-breakpoint-up(sm) {
+				text-align: left;
+			}
+		}
+	}
+}
+
+.template-box-with-fruits {
+
+	// product
+	h1 {
+		font-size: 22px !important;
+		font-weight: 700 !important;
+	}
+
+	label,
+	.price-label {
+		font-size: 13px;
+		font-family: $montserrat;
+		font-weight: 600;
+	}
+
+	tr {
+		@extend .d-flex;
+		@extend .flex-column;
+		@extend .mt-4;
+
+		+ tr {
+			.choices {
+				> div {
+					position: relative;
+
+					label {
+						&:before {
+							content: '';
+							margin-bottom: 3px;
+							display: block;
+							width: 100%;
+							height: 25px;
+							background-repeat: no-repeat;
+							background-position: center;
+							background-size: contain;
+							// background-image: url('../images/box.svg');
+						}
+					}
+
+					+ div {
+						label {
+							&:before {
+								// background-image: url('../images/basket.svg');
+							}
+						}
+					}
+				}
+			}
+			.choice {
+				label {
+					font-size: 8px;
+					line-height: 8px;
+					font-weight: 600;
+
+					span {
+						display: none !important;
+					}
+				}
+			}
+
+			td.value > div {
+				@extend .d-inline-flex;
+			}
+		}
+	}
+
+	p {
+		font-family: $montserrat;
+	}
+
+	.woocommerce-product-details__short-description {
+		@include media-breakpoint-down(xs) {
+			padding: 15px;
+			background-color: #E6F8EE;
+		}
+	}
+}
+
+.template-gift-baskets {
+	.page-header + a {
+		font-size: 9px;
+		@include media-breakpoint-up(sm) {
+			font-size: 20px;
+		}
+	}
+	@include media-breakpoint-down(xs) {
+		ul.products {
+			margin: 0 -15px !important;
+			li a {
+				h2 {
+					font-size: 10px;
+				}
+				.price {
+					margin-top: 10px !important;
+					margin-bottom: 10px !important;
+					font-size: $font-size-sm;
+					font-weight: 700 !important;
+				}
+				&.button {
+					font-size: 8px !important;
+				}
+			}
+		}
+	}
+	img {
+		margin-bottom: .25rem;
+		width: 100%;
+		height: auto;
+	}
+	a.button {
+		font-size: 17px !important;
+	}
+}
+
+.template-subscription {
+
+	main img {
+		width: 100%;
+		height: auto;
+	}
+
+	.carousel {
+		.carousel-indicators {
+			bottom: -50px;
+			@include media-breakpoint-up(sm) {
+				bottom: -100px;
+			}
+		}
+	}
+
+	.product-special-image .carousel-item img {
+		height: auto;
+		@include media-breakpoint-up(sm) {
+			position: absolute;
+			top: -80px;
+			left: 0;
+			bottom: 0;
+			width: auto !important;
+			max-width: 1920px;
+		}
+	}
+
+	.product-det {
+		& h2 {
+			font-family: $montserrat;
+			font-size: 18px;
+			font-weight: normal;
+		}
+	}
+	
+  	.basket-size {
+		& p {
+			float: left;
+			font-weight: 700;
+			font-size: 21px;
+		}
+	
+		& p span {
+			font-weight: normal;
+			font-size: 11px;
+		}
+  	}
+
+	.basket-order {
+		font-size: 14px;
+
+		& span {
+			font-size: 20px;
+			font-weight: bold;
+		}
+	}
+  
+  	.how-it-works {
+		& h2 {
+			font-size: 30px;
+		}
+	
+		& span {
+			font-size: 40px;
+			font-weight: bold;
+			font-family: $base-font-family;
+		}
+	}
+}
+
+.template-contacts {
+
+	.contact-ctas a {
+		font-family: $montserrat;
+		color: $brand-primary-color;
+
+		&:first-child {
+			font-size: 40px;
+			font-weight: 600;
+
+			@include media-breakpoint-up(md) {
+				font-size: 50px;
+			}
+		}
+		&:last-child {
+			font-size: 25px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 30px;
+			}
+		}
+	}
+
+	.company-info {
+		font-size: 20px;
+		font-family: $montserrat;
+		font-weight: 500;
+	}
+
+	.company-address p {
+		font-size: 20px;
+		font-family: $montserrat;
+		font-weight: 500;
+		&:last-child {
+			font-weight: 400;
+		}
+	}
+}

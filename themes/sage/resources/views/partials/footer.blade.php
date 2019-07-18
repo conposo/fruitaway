@@ -20,29 +20,37 @@
         </div>
     </div>
 
-    <div class="row border-bottom pt-3 pb-3">
-        <div class="col">
+    <div class="row border-bottom py-3">
+        <div class="col-6 col-md">
             {!! App::logo('big', 'print') !!}
         </div>
-        <div class="col">
+        <div class="col-6 col-md">
             <h3>{{ get_field('sections', 'options')['products']['title'] }}</h3>
             @php $links = get_field('sections', 'options')['products']['links'] @endphp
-            @foreach($links as $link)
-                <a href="{{ $link['item']['url'] }}">
-                    {!! $link['item']['title'] !!}
-                </a>
-            @endforeach
+            <ul>
+                @foreach($links as $link)
+                <li>
+                    <a href="{{ $link['item']['url'] }}">
+                        {!! $link['item']['title'] !!}
+                    </a>
+                </li>
+                @endforeach
+            </ul>
         </div>
-        <div class="col">
+        <div class="col-6 col-md">
             <h3>{{ get_field('sections', 'options')['info']['title'] }}</h3>
             @php $links = get_field('sections', 'options')['info']['links'] @endphp
-            @foreach($links as $link)
-                <a href="{{ $link['item']['url'] }}">
-                    {!! $link['item']['title'] !!}
-                </a>
-            @endforeach
+            <ul>
+                @foreach($links as $link)
+                <li>
+                    <a href="{{ $link['item']['url'] }}">
+                        {!! $link['item']['title'] !!}
+                    </a>
+                </li>
+                @endforeach
+            </ul>
         </div>
-        <div class="col">
+        <div class="contact-with-us col-6 col-md">
             <h3>{{ get_field('sections', 'options')['contacts']['title'] }}</h3>
             @php $links = get_field('sections', 'options')['contacts']['links'] @endphp
             @foreach($links as $link)
@@ -51,10 +59,10 @@
                 </a>
             @endforeach
         </div>
-        <div class="col-5">
+        <div class="newsletter col-6 col-md-5 ">
             <h3>{!! get_field('sections', 'options')['newsletter']['title'] !!}</h3>
             <div>{!! do_shortcode(get_field('sections', 'options')['newsletter']['form']) !!}</div>
-            <p>{{ get_field('sections', 'options')['newsletter']['promise'] }}</p>
+            <p class="text-center">{{ get_field('sections', 'options')['newsletter']['promise'] }}</p>
         </div>
     </div>
     <div class="row bottom-line pt-3 pb-3">

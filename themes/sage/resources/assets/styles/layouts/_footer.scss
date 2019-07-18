@@ -1,0 +1,84 @@
+footer {
+  font-family: $open-sans;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+	
+	a {
+    color: #2A191F;
+	}
+
+  ul {
+    list-style: none;
+    padding: 0;
+    font-size: 13px;
+		font-weight: 300;
+
+		a:after {
+			content: ">";
+			padding-left: 5px;
+		}
+  }
+
+  .bottom-line p {
+    font-size: 13px;
+    margin-top: unset;
+    margin-bottom: unset;
+  }
+
+  .contact-with-us {
+    h3 {
+			
+			+ a {
+				font-weight: bold;
+				font-size: 24px;
+			}
+    }
+  }
+
+  .lets-be-friends p {
+    margin-bottom: 0;
+  }
+
+  .mobile-section {
+    @extend .border-top;
+    @extend .border-bottom;
+    @extend .pt-3;
+
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: right;
+      border: none !important;
+      padding-top: 0 !important;
+    }
+  }
+
+  .newsletter {
+    > p {
+      font-size: 12px;
+    }
+  }
+
+  form {
+    input {
+      margin-bottom: 5px;
+      padding-left: 5px;
+      border-radius: 10px;
+      border: 1px solid #828286;
+      color: #828286;
+    }
+    
+    button {
+      display: block;
+      width: 100%;
+      color: $white;
+      text-align: center;
+      background-color: #FE3E49;
+      border-radius: 25px;
+    }
+  }
+}

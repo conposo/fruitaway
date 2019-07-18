@@ -2,7 +2,7 @@
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
-    @include('partials.page-header')
+    <!-- @include('partials.page-header') -->
 
     @if( isset($slider) && $slider )
         <script src="https://cdnjs.cloudflare.com/ajax/libs/onepage-scroll/1.3.1/jquery.onepage-scroll.min.js" integrity="sha256-ebDxrwt7kMPVFDyByLPRX8aoDawYgA8b32EwRsV1Avg=" crossorigin="anonymous"></script>
@@ -14,7 +14,7 @@
                 <section class="d-flex align-items-center">
                     <div class="container">
                         <div class="container-inner d-flex flex-column-reverse flex-md-row">
-                            <div class="col-lg-6 content">
+                            <div class="col-lg-6 content d-flex align-items-center">
                                 <div>
                                     @if( $heading = get_sub_field('heading') )
                                         <h1 class="mb-3 mb-md-4">{{ $heading }}</h1>

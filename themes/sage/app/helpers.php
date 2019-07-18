@@ -136,3 +136,60 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+
+/**
+ * Theme Custom Functions
+ */
+if ( ! function_exists( 'print_attribute_radio_or_dropdown' ) ) {
+    /*
+     * Print Choices for Product with Variations // (for now only for "Box with seasoned fruits")
+     */
+    function print_attribute_radio_or_dropdown( $checked_value, $value, $label, $name, $available_variations, $rand_attribute ) {
+        global $product;
+        $weight = '';
+        foreach($available_variations as $variation)
+        {
+            if(in_array($value, $variation['attributes']))
+            {
+                (!empty($variation['weight'])) ? $weight = $variation['weight_html'] : $weight = '';
+            }
+        }
+
+        $input_name = 'attribute_' . esc_attr( $name );
+
+        $esc_value = esc_attr( $value );
+        $id = esc_attr( $name . '_v_' . $value . $product->get_id() ); //added product ID at the end of the name to target single products
+        $checked = checked( $checked_value, $value, false );
+        $filtered_label = apply_filters( 'woocommerce_variation_option_name', $label, esc_attr( $name ) );
+        ($checked) ? $checked_class = 'checked' : $checked_class = '';
+
+        if($product->get_id() == $GLOBALS['the_product_id'])
+        {
+            printf( '
+            <div
+                id="%7$s%8$s"
+                class="d-flex justify-content-center align-items-center choice text-center '.$checked_class.'"
+                onclick="jQuery(\'.attribute_%7$s .choice\').removeClass(\'checked\'); jQuery(\'#%7$s%8$s\').addClass(\'checked\')">
+                <input type="radio" name="%1$s" value="%2$s" id="%3$s" %4$s>
+                <label for="%3$s">%5$s<span class="d-block" >%6$s</span></label>
+            </div>', $input_name, $esc_value, $id, $checked, $filtered_label, $weight, $rand_attribute, rand() );
+        }
+        else
+        {
+            printf( '           
+            <div
+                id="%7$s%8$s"
+                class="px-2 dropdown-item d-flex w-100 justify-content-center align-items-center choice text-center '.$checked_class.'"
+                onclick="jQuery(\'.custom-dropdown-toggle span.text\').text(\'%5$s\')"
+                onclick="$(\'.attribute_%7$s .choice\').removeClass(\'checked\'); $(\'#%7$s%8$s\').addClass(\'checked\')">
+            <label class="m-0 w-100 d-block text-left" for="%3$s">
+                %5$s
+                <span class="d-block">%6$s</span>
+                <input type="radio" name="%1$s" value="%2$s" id="%3$s" %4$s style="ddisplay:none;">
+            </label>
+            </div>', $input_name, $esc_value, $id, $checked, $filtered_label, $weight, $rand_attribute, rand() );
+        }
+        return 'print_attribute_radio_or_dropdown';
+    }
+}  
