@@ -10,7 +10,7 @@
 				font-size: 34px;
 			}
 		}
-		span {
+		p {
 			color:#2a191f;
 			font-size: 18px;
 
@@ -69,7 +69,6 @@
 	label,
 	.price-label {
 		font-size: 13px;
-		font-family: $montserrat;
 		font-weight: 600;
 	}
 
@@ -93,14 +92,14 @@
 							background-repeat: no-repeat;
 							background-position: center;
 							background-size: contain;
-							// background-image: url('../images/box.svg');
+							background-image: url('../images/box.svg');
 						}
 					}
 
 					+ div {
 						label {
 							&:before {
-								// background-image: url('../images/basket.svg');
+								background-image: url('../images/basket.svg');
 							}
 						}
 					}
@@ -108,9 +107,9 @@
 			}
 			.choice {
 				label {
-					font-size: 8px;
-					line-height: 8px;
-					font-weight: 600;
+					font-size: 8px !important;
+					line-height: 8px !important;
+					font-weight: 600 !important;
 
 					span {
 						display: none !important;
@@ -118,7 +117,7 @@
 				}
 			}
 
-			td.value > div {
+			td .value > div:last-child {
 				@extend .d-inline-flex;
 			}
 		}
@@ -162,7 +161,7 @@
 			}
 		}
 	}
-	img {
+	main img {
 		margin-bottom: .25rem;
 		width: 100%;
 		height: auto;
@@ -238,7 +237,19 @@
 		& span {
 			font-size: 40px;
 			font-weight: bold;
-			font-family: $base-font-family;
+			font-family: $montserrat-alternates;
+		}
+	}
+
+	#contact_form {
+		h2 {
+			font-size: 36px;
+			font-weight: normal;
+			line-height: 1.4;
+
+			strong {
+				font-weight: bold;
+			}
 		}
 	}
 }
@@ -246,7 +257,6 @@
 .template-contacts {
 
 	.contact-ctas a {
-		font-family: $montserrat;
 		color: $brand-primary-color;
 
 		&:first-child {
@@ -268,13 +278,11 @@
 
 	.company-info {
 		font-size: 20px;
-		font-family: $montserrat;
 		font-weight: 500;
 	}
 
 	.company-address p {
 		font-size: 20px;
-		font-family: $montserrat;
 		font-weight: 500;
 		&:last-child {
 			font-weight: 400;

@@ -18,6 +18,11 @@
     </div>
     @if( isset($show_testimonials) && $show_testimonials )
       @include('partials.testimonials-carousel')
+    @elseif( is_product() )
+      @include('partials.testimonials-carousel')
+      @php
+        do_action('custom_woocommerce_related_product');
+      @endphp
     @endif
     @yield('contact_form')
     @php do_action('get_footer') @endphp

@@ -1,0 +1,48 @@
+.woocommerce-cart {
+    .woocommerce {
+        @extend .container;
+
+        ul.products {
+            @extend .d-flex;
+            @extend .m-0;
+            @extend .p-0;
+
+            list-style: none;
+
+            .product.type-product {
+                @extend .col-4;
+
+                text-align: center;
+            }
+        }
+    }
+}
+
+.woocommerce-cart {
+    .cart-collaterals,
+    form {
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: $montserrat;
+
+            &.w-100 {
+                font-weight: 300;
+            }
+        }
+    }
+    .cart-collaterals {
+        
+        .product {
+            h2 {
+                font-size: 16px;
+                font-weight: 400;
+            }
+    
+            .price {
+                font-size: 23px;
+                font-weight: 700;
+            }
+        }
+    }
+}

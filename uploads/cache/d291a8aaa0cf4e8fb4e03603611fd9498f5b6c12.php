@@ -17,8 +17,10 @@
                                     <?php if( $heading = get_sub_field('heading') ): ?>
                                         <h1 class="mb-3 mb-md-4"><?php echo e($heading); ?></h1>
                                     <?php endif; ?>
-                                    <span class="mb-3 mb-md-4 d-block"><?php echo e(get_sub_field('text')); ?></span>
-                                    <a class="text-uppercase btn-deco btn-deco-green" href="<?php echo e(get_sub_field('cta')); ?>"><?php echo e(__('виж повече', 'f4y')); ?></a>
+                                    <p class="mb-3 mb-md-4 d-block"><?php echo e(get_sub_field('text')); ?></p>
+                                    <a class="text-uppercase btn-deco btn-deco-green" href="<?php echo e(get_sub_field('cta')); ?>">
+                                        <span class="position-relative"><?php echo e(__('виж повече', 'f4y')); ?></span>
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-lg-6 pt-3 pt-md-0 image">

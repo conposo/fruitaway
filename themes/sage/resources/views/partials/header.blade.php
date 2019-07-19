@@ -1,5 +1,5 @@
-<header class="banner navbar navbar-expand-md navbar-white" role="navigation">
-  <div class="container">
+<header class="py-4 banner navbar navbar-expand-md navbar-white" role="navigation">
+  <div class="container -fluid">
 
     <a class="mr-0 brand navbar-brand position-relative" href="{{ home_url('/') }}">
       @if(is_front_page() && !wp_is_mobile())

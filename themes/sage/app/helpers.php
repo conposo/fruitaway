@@ -164,7 +164,7 @@ if ( ! function_exists( 'print_attribute_radio_or_dropdown' ) ) {
         $filtered_label = apply_filters( 'woocommerce_variation_option_name', $label, esc_attr( $name ) );
         ($checked) ? $checked_class = 'checked' : $checked_class = '';
 
-        if($product->get_id() == $GLOBALS['the_product_id'])
+        if(isset($GLOBALS['the_product_id']) && $GLOBALS['the_product_id'] == $product->get_id())
         {
             printf( '
             <div
@@ -172,7 +172,10 @@ if ( ! function_exists( 'print_attribute_radio_or_dropdown' ) ) {
                 class="d-flex justify-content-center align-items-center choice text-center '.$checked_class.'"
                 onclick="jQuery(\'.attribute_%7$s .choice\').removeClass(\'checked\'); jQuery(\'#%7$s%8$s\').addClass(\'checked\')">
                 <input type="radio" name="%1$s" value="%2$s" id="%3$s" %4$s>
-                <label for="%3$s">%5$s<span class="d-block" >%6$s</span></label>
+                <label class="w-100" for="%3$s">
+                    %5$s
+                    <span class="d-block" >%6$s</span>
+                </label>
             </div>', $input_name, $esc_value, $id, $checked, $filtered_label, $weight, $rand_attribute, rand() );
         }
         else
@@ -180,10 +183,10 @@ if ( ! function_exists( 'print_attribute_radio_or_dropdown' ) ) {
             printf( '           
             <div
                 id="%7$s%8$s"
-                class="px-2 dropdown-item d-flex w-100 justify-content-center align-items-center choice text-center '.$checked_class.'"
+                class="p-0 dropdown-item d-flex w-100 justify-content-center align-items-center choice text-center '.$checked_class.'"
                 onclick="jQuery(\'.custom-dropdown-toggle span.text\').text(\'%5$s\')"
                 onclick="$(\'.attribute_%7$s .choice\').removeClass(\'checked\'); $(\'#%7$s%8$s\').addClass(\'checked\')">
-            <label class="m-0 w-100 d-block text-left" for="%3$s">
+            <label class="m-0 p-2 d-block w-100 text-left" for="%3$s">
                 %5$s
                 <span class="d-block">%6$s</span>
                 <input type="radio" name="%1$s" value="%2$s" id="%3$s" %4$s style="ddisplay:none;">
@@ -193,3 +196,41 @@ if ( ! function_exists( 'print_attribute_radio_or_dropdown' ) ) {
         return 'print_attribute_radio_or_dropdown';
     }
 }  
+
+
+
+/**
+ * Used in Wooviews/ Single Product Thumbnails
+ */
+function custom_wc_get_gallery_image_html( $attachment_id, $main_image = false ) {
+    $flexslider        = (bool) apply_filters( 'woocommerce_single_product_flexslider_enabled', get_theme_support( 'wc-product-gallery-slider' ) );
+    $gallery_thumbnail = wc_get_image_size( 'gallery_thumbnail' );
+    $thumbnail_size    = apply_filters( 'woocommerce_gallery_thumbnail_size', array( $gallery_thumbnail['width'], $gallery_thumbnail['height'] ) );
+    $image_size        = apply_filters( 'woocommerce_gallery_image_size', $flexslider || $main_image ? 'woocommerce_single' : $thumbnail_size );
+    $full_size         = apply_filters( 'woocommerce_gallery_full_size', apply_filters( 'woocommerce_product_thumbnails_large_size', 'full' ) );
+    $thumbnail_src     = wp_get_attachment_image_src( $attachment_id, $thumbnail_size );
+    $full_src          = wp_get_attachment_image_src( $attachment_id, $full_size );
+    $alt_text          = trim( wp_strip_all_tags( get_post_meta( $attachment_id, '_wp_attachment_image_alt', true ) ) );
+    $image             = wp_get_attachment_image(
+        $attachment_id,
+        $image_size,
+        false,
+        apply_filters(
+            'woocommerce_gallery_image_html_attachment_image_params',
+            array(
+                'title'                   => _wp_specialchars( get_post_field( 'post_title', $attachment_id ), ENT_QUOTES, 'UTF-8', true ),
+                'data-caption'            => _wp_specialchars( get_post_field( 'post_excerpt', $attachment_id ), ENT_QUOTES, 'UTF-8', true ),
+                'data-src'                => esc_url( $full_src[0] ),
+                'data-large_image'        => esc_url( $full_src[0] ),
+                'data-large_image_width'  => esc_attr( $full_src[1] ),
+                'data-large_image_height' => esc_attr( $full_src[2] ),
+                'class'                   => esc_attr( $main_image ? 'wp-post-image' : '' ),
+            ),
+            $attachment_id,
+            $image_size,
+            $main_image
+        )
+    );
+
+    return '<div class="carousel-item _active">' . $image . '</div>';
+}

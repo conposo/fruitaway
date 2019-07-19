@@ -13,10 +13,12 @@
       @include('partials.content-page')
     @else
 
-      <div class="mt-5 mb-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="my-4 py-1 d-flex flex-column flex-md-row justify-content-between align-items-center">
         @include('partials.page-header')
         @if($cta_header)
-          <a href="{{ esc_url( get_permalink($cta_header) ) }}" class="my-4 btn-deco btn-deco-green">{{ __('НАПРАВИ СИ САМ', 'f4y') }}</a>
+          <a href="{{ esc_url( get_permalink($cta_header) ) }}" class="btn-deco btn-deco-green">
+            <span class="position-relative">{{ __('НАПРАВИ СИ САМ', 'f4y') }}</span>
+          </a>
         @endif
       </div>
 
@@ -38,10 +40,18 @@
           @endif
 
           <div class="col-12 @if( count($terms) > 1 ) col-md-9 @endif">
+            <script>
+            jQuery(document).ready(function(){
+              jQuery('a.button').each(function(){
+                jQuery(this).text('<?php _e('Виж повече >', 'f4y') ?>')
+              })
+            })
+            </script>
             @foreach( $terms as $term_id )
               @php $term = get_term_by('id', $term_id, 'product_cat'); @endphp
               {!! do_shortcode('[products category='.$term->slug.']') !!}
             @endforeach
+          </div>
         </div>
       @endif
 

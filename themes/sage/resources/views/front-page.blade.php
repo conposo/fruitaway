@@ -19,8 +19,10 @@
                                     @if( $heading = get_sub_field('heading') )
                                         <h1 class="mb-3 mb-md-4">{{ $heading }}</h1>
                                     @endif
-                                    <span class="mb-3 mb-md-4 d-block">{{ get_sub_field('text') }}</span>
-                                    <a class="text-uppercase btn-deco btn-deco-green" href="{{ get_sub_field('cta') }}">{{ __('виж повече', 'f4y') }}</a>
+                                    <p class="mb-3 mb-md-4 d-block">{{ get_sub_field('text') }}</p>
+                                    <a class="text-uppercase btn-deco btn-deco-green" href="{{ get_sub_field('cta') }}">
+                                        <span class="position-relative">{{ __('виж повече', 'f4y') }}</span>
+                                    </a>
                                 </div>
                             </div>
                             <div class="col-lg-6 pt-3 pt-md-0 image">

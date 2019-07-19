@@ -1,9 +1,11 @@
 .banner .nav li {
   @extend .nav-item;
+  padding: 0.5rem 1rem;
 }
 
 .banner .nav a {
   @extend .nav-link;
+  @extend .p-0;
   color: #2A191F;
 }
 
@@ -15,7 +17,7 @@
   @include media-breakpoint-up(md) {
     .home & .navbar-brand img {
       position: absolute;
-      top: 0;
+      top: -5px;
       left: 0;
     }
   }

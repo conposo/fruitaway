@@ -1,6 +1,19 @@
 
-html {
+html,
+body {
     font-family: $montserrat;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $montserrat-alternates;
+    font-weight: 700;
 }
 
 h1 {

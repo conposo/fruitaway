@@ -1,5 +1,4 @@
 .btn-deco {
-    font-family: $montserrat;
     font-size: 20px;
     font-weight: 600;
     position: relative;
@@ -32,7 +31,6 @@
     &:before, &:after {
       content: '';
       position: absolute;
-      z-index: -1;
       border-radius: 10px;
     }
   }
@@ -49,7 +47,6 @@
   }
   
   .cta-pink {
-    font-family: $montserrat;
     font-size: 20px;
     font-weight: 600;
     position: relative;

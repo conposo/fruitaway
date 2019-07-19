@@ -26,7 +26,9 @@ global $product;
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
 
-	<button type="submit" class="btn-deco btn-deco-red single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+	<button type="submit" class="btn-deco btn-deco-red single_add_to_cart_button button alt">
+		<span class="position-relative"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></span>
+	</button>
 
 	<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 

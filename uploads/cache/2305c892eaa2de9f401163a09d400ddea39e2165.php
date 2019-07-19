@@ -62,7 +62,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 								?>
 								</div>
 								<script>
-								jQuery(document).on('change', '.choices input', function() {
+								jQuery(document).on('change', '.get_input_checked input', function() {
 									console.log(jQuery(this).attr('name'));
 								jQuery('select[name="'+jQuery(this).attr('name')+'"]').val(jQuery(this).val()).trigger('change');
 								});
@@ -80,9 +80,9 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 											// 	print_attribute_radio_or_dropdown( $checked_value, $term->slug, $term->name, $sanitized_name );
 											// }
 										} else {
-											if($product->get_id() == $GLOBALS['the_product_id']):
+											if(isset($GLOBALS['the_product_id']) && $GLOBALS['the_product_id'] == $product->get_id()):
 												?>
-												<div class="d-flex justify-content-around choices attribute_<?php echo $rand_attribute; ?>">
+												<div class="get_input_checked choices d-flex justify-content-around attribute_<?php echo $rand_attribute; ?>">
 													<?php
 													foreach ( $options as $option ) {
 														App\print_attribute_radio_or_dropdown( $checked_value, $option, $option, $sanitized_name, $available_variations, $rand_attribute );
@@ -94,11 +94,11 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 												?>
 												<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 												<script>
-												$(document).ready(function(){
-													$('.custom-dropdown-toggle span.text').text( $('.dropdown-menu > div:first-child label').text() )
+												jQuery(document).ready(function(){
+													jQuery('.custom-dropdown-toggle span.text').text( jQuery('.dropdown-menu > div:first-child label').text() )
 												})
 												</script>
-												<div class="select-choices attribute_<?php echo $rand_attribute; ?>">
+												<div class="get_input_checked select-choices attribute_<?php echo $rand_attribute; ?>">
 													<div class="dropdown">
 														<span class="pl-2 custom-dropdown-toggle d-flex justify-content-between align-items-center" id="dropdownMenuChooseWine" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 															<span class="text"><?php _e('Избери вино', 'f4y'); ?></span>

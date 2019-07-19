@@ -18,6 +18,11 @@
     </div>
     <?php if( isset($show_testimonials) && $show_testimonials ): ?>
       <?php echo $__env->make('partials.testimonials-carousel', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php elseif( is_product() ): ?>
+      <?php echo $__env->make('partials.testimonials-carousel', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+      <?php
+        do_action('custom_woocommerce_related_product');
+      ?>
     <?php endif; ?>
     <?php echo $__env->yieldContent('contact_form'); ?>
     <?php do_action('get_footer') ?>

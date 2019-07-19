@@ -1,4 +1,4 @@
-<div class="info-section-2-col row">
+<div class="my-5 pt-5 info-section-2-col row">
 	<figure class="col-12 col-md-6 position-relative">
 		<?php
 		$image_id = $fruits_in_the_box->image;

@@ -7,10 +7,12 @@
       <?php echo $__env->make('partials.content-page', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <?php else: ?>
 
-      <div class="mt-5 mb-3 d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="my-4 py-1 d-flex flex-column flex-md-row justify-content-between align-items-center">
         <?php echo $__env->make('partials.page-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php if($cta_header): ?>
-          <a href="<?php echo e(esc_url( get_permalink($cta_header) )); ?>" class="my-4 btn-deco btn-deco-green"><?php echo e(__('НАПРАВИ СИ САМ', 'f4y')); ?></a>
+          <a href="<?php echo e(esc_url( get_permalink($cta_header) )); ?>" class="btn-deco btn-deco-green">
+            <span class="position-relative"><?php echo e(__('НАПРАВИ СИ САМ', 'f4y')); ?></span>
+          </a>
         <?php endif; ?>
       </div>
 
@@ -32,11 +34,19 @@
           <?php endif; ?>
 
           <div class="col-12 <?php if( count($terms) > 1 ): ?> col-md-9 <?php endif; ?>">
+            <script>
+            jQuery(document).ready(function(){
+              jQuery('a.button').each(function(){
+                jQuery(this).text('<?php _e('Виж повече >', 'f4y') ?>')
+              })
+            })
+            </script>
             <?php $__currentLoopData = $terms; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $term_id): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
               <?php $term = get_term_by('id', $term_id, 'product_cat'); ?>
               <?php echo do_shortcode('[products category='.$term->slug.']'); ?>
 
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+          </div>
         </div>
       <?php endif; ?>
 

@@ -2,7 +2,8 @@ footer {
   font-family: $open-sans;
 
   h3 {
-    font-size: 16px;
+    font-family: $open-sans;
+    font-size: 16px !important;
     font-weight: 400;
     text-transform: uppercase;
   }

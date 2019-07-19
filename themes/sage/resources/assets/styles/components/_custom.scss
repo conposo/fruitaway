@@ -1,4 +1,6 @@
 .fruits-in-box {
+  position: relative;
+  z-index: 1;
   h2 {
     font-size: 30px;
     font-weight: 700;
@@ -15,10 +17,14 @@
 
 .info-section-2-col {
   img {
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      height: auto;
+    }
     @include media-breakpoint-up(sm) {
       position: absolute;
       right: 0;
-      top: -150px;
+      top: -($spacer * 6);
       bottom: 0;
       width: auto;
       height: 150%;
@@ -33,21 +39,25 @@
 }
 
 .wpcf7 {
-  & label{
-    font-family: $montserrat;
+  & label {
     font-size: 14px;
     width: 100%;
   }
 
-  & input, textarea {
+  & input,
+  textarea {
     width: 100%;
   }
 
-  & input, button, select, optgroup, textarea {
-    border: 1px solid #D3D3D3;
+  & input,
+  button,
+  select,
+  optgroup,
+  textarea {
+    border: 1px solid #d3d3d3;
   }
 
-  & input[type=submit] {
+  & input[type="submit"] {
     @extend .btn-deco;
     @extend .btn-deco-red;
   }
