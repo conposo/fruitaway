@@ -58,10 +58,7 @@ if ( ! is_ajax() ) {
 					class="mt-3 mx-auto btn-deco btn-deco-red button alt"
 					type="submit"
 					name="woocommerce_checkout_place_order"
-					value="' . esc_attr( $order_button_text ) . '"
-					data-value="' . esc_attr( $order_button_text ) . '">
-						<span class="position-relative">' . esc_html( $order_button_text ) . '</span>
-				</button>' ); // @codingStandardsIgnoreLine ?>
+					__value="' . __( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y' ) . '" __data-value="' . __( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y' ) . '"><span class="position-relative">' . __( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y' ) . '</span></button>' ); // @codingStandardsIgnoreLine ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

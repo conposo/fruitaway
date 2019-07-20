@@ -97,3 +97,75 @@
         </div><!-- END container -->
     </div><!-- END container-fluid -->
 </footer>
+
+
+<!--Hidden menu-->
+
+<script>
+jQuery(document).ready(function() {
+    jQuery(window).scroll(function() {
+        if(jQuery(document).scrollTop() > 100) {
+            jQuery('.secondary-nav').addClass('shown');
+        } else {
+            jQuery('.secondary-nav').removeClass('shown');
+        }
+        if(jQuery('.secondary-nav').hasClass('shown') && jQuery(document).scrollTop() < 151) {
+            jQuery('.secondary-nav').addClass('hide');
+        }
+    });
+});
+</script>
+<div id="hidden-menu" class="local_nav banner px-4 secondary-nav bg-white position-fixed w-100 d-none d-xl-flex justify-content-between align-items-center">
+    <div class="container d-flex justify-content-between">
+        <a class="mr-0 brand navbar-brand position-relative" href="{{ home_url('/') }}">
+            {!! App::logo('regular', 'print') !!}
+        </a>
+        <nav class="nav-primary">
+        @if (has_nav_menu('primary_navigation'))
+            {!! wp_nav_menu([
+            'theme_location' => 'primary_navigation',
+            'menu_class' => 'nav navbar-nav flex-row',
+            'depth' => 2,
+            'container' => 'div',
+            'container_class' => '',
+            'container_id' => '',
+            ]) !!}
+        @endif
+        </nav>
+        <a id="go_to_cart" class="text-right d-none d-md-block" href="<?= wc_get_cart_url(); ?>">
+        {!! wp_get_attachment_image( get_field('basket_icon_id', 'options'), [32, 32] ) !!}
+        </a>
+    </div>
+    <script>
+    jQuery(document).ready(function(){
+      jQuery('#go_to_cart').width( jQuery('.brand img').width() )
+    });
+    </script>
+</div>
+
+<?php //dd( get_field('subscription', 'option'), get_field('box_with_fruits', 'option') ) ; ?>
+<?php if( get_the_ID() == get_field('subscription', 'option') || get_the_ID() == get_field('box_with_fruits', 'option') ) : ?>
+<div id="hidden-menu" class="local_nav banner px-4 secondary-nav bg-white position-fixed w-100 d-none d-xl-flex justify-content-between align-items-center">
+    <div class="py-1 container d-flex align-items-center justify-content-between">
+        <div class="brand d-flex align-items-center">
+            {!! App::logo('regular', 'print') !!}
+            @if(get_the_ID() == get_field('box_with_fruits', 'option'))
+                <div class="headline ml-3">Кутия със сезонни плодове</div>
+            @elseif(get_the_ID() == get_field('subscription', 'option'))
+                <div class="headline ml-3">Абонаментна доставка на сезонни плодове</div>
+            @endif
+        </div>
+        @if(get_the_ID() == get_field('box_with_fruits', 'option'))
+            <a class="d-flex justify-content-center align-items-center btn-deco btn-deco-red" href="#top">
+                <span class="position-relative">ИЗБЕРИ И ПОРЪЧАЙ</span>
+            </a>
+        @elseif(get_the_ID() == get_field('subscription', 'option'))
+            <a class="d-flex justify-content-center align-items-center btn-deco btn-deco-red" href="#contact_form">
+                <span class="position-relative">НАПРАВИ ЗАПИТВАНЕ</span>
+            </a>
+        @endif
+    </div>
+</div>
+<?php endif; ?>
+
+<!--Hidden menu End-->

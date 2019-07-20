@@ -167,7 +167,7 @@ font-size: 11px;
 
 <div class="mt-5 customadditional-button text-center">
 	<?php $order_button_text = __( 'ПОРЪЧАЙ >', 'f4y' ); ?>
-	<?php echo apply_filters( 'woocommerce_order_button_html', '<a href="'.wc_get_checkout_url().'" class="px-5 btn-deco btn-deco-red button alt px-0" >' . esc_html( $order_button_text ) . '</a>' ); // @codingStandardsIgnoreLine ?>
+	<?php echo apply_filters( 'woocommerce_order_button_html', '<a href="'.wc_get_checkout_url().'" class="px-5 btn-deco btn-deco-red button alt px-0" ><span class="position-relative">' . esc_html( $order_button_text ) . '</span></a>' ); // @codingStandardsIgnoreLine ?>
 </div>
 
 	</form>

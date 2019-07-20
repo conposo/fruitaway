@@ -74,7 +74,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                         url: \''.admin_url( 'admin-ajax.php' ).'\',
                         data: {
                             action: \'remove_item\',
-                            cart_item_key: $(_this).attr("data-key"),
+                            cart_item_key: jQuery(_this).attr("data-key"),
                         },
                         beforeSend: function() {
                             console.log(\'beforeSend\');

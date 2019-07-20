@@ -9,7 +9,7 @@
     
     <!-- Product -->
     <?php if( isset($the_product_id) && $GLOBALS['the_product_id'] = $the_product_id ): ?>
-    <section class="container my-5">
+    <section id="top" class="container my-5">
 	    <div class="row">
 		    <div class="col">
           <?php global $product; ?>

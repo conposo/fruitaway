@@ -254,6 +254,54 @@
 	}
 }
 
+.template-do-it-yourself {
+	> header {
+		background-color: #E6F8EE !important;
+	}
+	.container-fluid.bg-success {
+        .h4 {
+            font-family: $montserrat;
+            font-size: 13px;
+            line-height: 1;
+            font-weight: 400;
+            @include media-breakpoint-up(sm) {
+                font-size: 18px;
+            }
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            @include media-breakpoint-up(sm) {
+                font-size: 44px;
+            }
+        }
+
+        a.active {
+            border-bottom: 3px dotted #FE3E49 !important;
+            text-decoration: none;
+        }
+	}
+	li.product {
+		img {
+			max-height: 200px;
+			width: auto;
+		}
+		a.button {
+			background-color: #FE3E49;
+			border-radius: 25px;
+			font-size: 9px;
+		}
+	}
+	form {
+		h2 {
+			font-size: 20px;
+			font-weight: 600;
+			font-family: $montserrat;
+			text-transform: uppercase;
+		}
+	}
+}
+
 .template-contacts {
 
 	.contact-ctas a {

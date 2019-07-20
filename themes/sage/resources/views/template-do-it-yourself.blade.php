@@ -2,10 +2,31 @@
   Template Name: Do It Yourself Template
 --}}
 
-@extends('layouts.app')
+@extends('layouts.app-fluid')
 
 @section('content')
   @while(have_posts()) @php the_post() @endphp
+
+  <div class="mb-5 container-fluid bg-success">
+    <div class="py-3 container">
+      <div class="page-header">
+        <span class="h4">{{$sup_header}}</span>
+        <h1>{!! App::title() !!}</h1>
+      </div>
+      @if( isset($categories) && $categories )
+        <ul class="border-0 nav nav-tabs" id="myTab" role="tablist">
+          @foreach( $categories as $term_id )
+            @php $term = get_term_by('id', $term_id, 'product_cat'); @endphp
+            <li class="nav-item mr-4">
+              <a class="px-0 border-0 bg-transparent nav-link <?php if(!isset($active)) $active = 1; if($active++ == 1) echo 'active'; ?>" id="<?= $term->slug ?>-tab" data-toggle="tab" href="#{{ $term->slug }}" role="tab" aria-controls="{{get_term_link( $term )}}" aria-selected="true">
+                {{$term->name}}
+              </a>
+            </li>
+          @endforeach
+        </ul>
+      @endif
+    </div>
+  </div>
 
   <section class="container mb-5">
     <div class="row">
@@ -15,21 +36,7 @@
           @include('partials.page-header')
           @include('partials.content-page')
         @else
-          <div class="page-header">
-            <span class="h4">{{$sup_header}}</span>
-            <h1>{!! App::title() !!}</h1>
-          </div>
           @if( isset($categories) && $categories )
-            <ul class="border-0 nav nav-tabs" id="myTab" role="tablist">
-              @foreach( $categories as $term_id )
-                @php $term = get_term_by('id', $term_id, 'product_cat'); @endphp
-                <li class="nav-item mr-4">
-                  <a class="px-0 border-0 bg-transparent nav-link <?php if(!isset($active)) $active = 1; if($active++ == 1) echo 'active'; ?>" id="<?= $term->slug ?>-tab" data-toggle="tab" href="#{{ $term->slug }}" role="tab" aria-controls="{{get_term_link( $term )}}" aria-selected="true">
-                    {{$term->name}}
-                  </a>
-                </li>
-              @endforeach
-            </ul>
             <div class="tab-content" id="productsTabs">
               @foreach( $categories as $term_id )
                 @php $term = get_term_by('id', $term_id, 'product_cat'); @endphp

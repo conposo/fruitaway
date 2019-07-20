@@ -25,9 +25,10 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 ); // Remove the payment options form from default location
     }, 15 );
 
-    add_filter( 'woocommerce_order_button_text', function(){
-        return __( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y' ); 
-    });
+    // useless - see payment.php
+    // add_filter( 'woocommerce_order_button_text', function(){
+    //     return __( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y' );
+    // });
 
     add_filter( 'woocommerce_default_address_fields' , 'custom_override_default_address_fields' );
     function custom_override_default_address_fields( $address_fields ) {
