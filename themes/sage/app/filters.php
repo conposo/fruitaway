@@ -178,26 +178,32 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         }
     });
 
+
     /**
      * Add to Cart Redirects
      */
     add_filter( 'woocommerce_add_to_cart_redirect',
     function ( $url ) {
-
-        $do_it_yourself_ID = get_field('do_it_yourself', 'option');
-        $terms = get_field('categories', $do_it_yourself_ID);
+        // $do_it_yourself_ID = get_field('do_it_yourself', 'option');
+        // $terms = get_field('categories', $do_it_yourself_ID);
 
         $product_id = isset( $_REQUEST['add-to-cart'] ) ? absint( $_REQUEST['add-to-cart'] ) : false;
         // var_dump($product_id);
         // die;
         $product_id = apply_filters( 'woocommerce_add_to_cart_product_id', $product_id );
-        $readirect_to_cart = get_post_meta( $product_id, '_my_custom_field', true );
+        // $readirect_to_cart = get_post_meta( $product_id, '_my_custom_field', true );
         
         $_pf = new \WC_Product_Factory();  
         $_product = $_pf->get_product($product_id);
         // var_dump($_product);
         // die;
-        if( $readirect_to_cart || $_product->is_type('variable') )
+        
+        // if( has_term( ['redirect_to_card'], 'product_tag', $product_id ) )
+        // {
+        //     $url = wc_get_cart_url();
+        // }
+        // if( $readirect_to_cart || $_product->is_type('variable') ) {}
+        if( $_product->is_type('variable') )
         {
             $url = wc_get_cart_url();
         }
@@ -205,24 +211,20 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
             return $url;
         }
 
-        // if( has_term( ['redirect_to_card'], 'product_tag', $product_id ) )
-        // {
-        //     $url = wc_get_cart_url();
-        // }
-        // else
-        // {
-        //     if ( has_term( $terms, 'product_cat', $product_id ) )
-        //     {
-        //         return get_permalink($do_it_yourself_ID);
-        //     }
-        //     else
-        //     {
-        //         $url = wc_get_cart_url(); // wc_get_checkout_url();
-        //     }
-        // }
-
         return $url;
     });
+
+    /**
+     * If cart has One or More than one Item Redirect to...
+     */
+    // add_action('template_redirect', function(){
+    //     global $woocommerce;
+    //     $do_it_yourself_ID = get_field('do_it_yourself', 'option');
+    //     if( is_page($do_it_yourself_ID) && WC()->cart->cart_contents_count == 1) {
+    //         wp_safe_redirect( get_permalink( wc_get_page_id( 'cart' ) ) );
+    //     }
+    // });
+
 }
 
 add_filter( 'the_content', function( $content ) {
