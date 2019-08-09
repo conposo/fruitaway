@@ -11,7 +11,7 @@
 						<div class="px-0 col-6 d-flex justify-content-between">
 							<div class="d-flex justify-content-between w-100">
 								<div class="px-0 col-4 product-count text-right">
-									<?php _e( 'Count', 'eca' ); ?>
+									<?php _e( 'Count', 'slk' ); ?>
 								</div>
 								<div class="px-0 col-4 product-price text-right">
 									<span class="product-price">
@@ -65,7 +65,6 @@
 								<?php
 								}
 							}
-
 							do_action( 'woocommerce_review_order_after_cart_contents' );
 						?>
 					</div>
@@ -73,42 +72,43 @@
 			</div>
 
 			<div class="row">
-				<div class="col-12 col-lg-7">
+				<div class="col-12 col-lg-6" style="opacity:0; cursor: default;">
 					<form class="woocommerce-coupon-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 						<?php if ( wc_coupons_enabled() ) { ?>
-							<div class="coupon under-proceed d-flex">
+							<div class="d-none coupon under-proceed d-flex">
 								<label for="" class="d-block">
 									<span class="d-block mb-2" style="font-weight: 300; font-size: 13px;">
-										<?php esc_attr_e( 'Въведи промокод', 'eca' ); ?>
+										<?php esc_attr_e( 'Въведи промокод', 'f4y' ); ?>
 									</span>
 									<input style="border: 2px solid rgba(238, 238, 238, 1);" type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php //esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> 
 									<button type="submit" style="
 background: #FE3E49;
+font-size: 13px;
 " class="text-dark button apply_coupon text-white" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" >
 										<?php //esc_attr_e( 'Apply coupon', 'eca' ); ?>
-										<?php _e( 'Приложи', 'eca' ); ?>
+										<?php _e( 'Приложи', 'f4y' ); ?>
 									</button>
 								</label>
 							</div>
 						<?php } ?>
 					</form>
 				</div>
-				<div class="strange-area col-12 col-lg-5">
-<style>
-.strange-area {
-font-size: 11px;
-}
-</style>
+				<div class="strange-area col-12 col-lg-6 pl-0">
+					<style>
+					.strange-area {
+						font-size: 11px;
+					}
+					</style>
 					<div class="w-100 text-right">
 						<div class="d-flex cart-subtotal">
-							<div class="w-50"><?php _e( 'Subtotal', 'woocommerce' ); ?></div>
-							<div class="w-50 font-weight-normal"><?php wc_cart_totals_subtotal_html(); ?></div>
+							<div class="w-75  pr-2"><?php _e( 'Subtotal', 'woocommerce' ); ?></div>
+							<div class="w-25 font-weight-normal"><?php wc_cart_totals_subtotal_html(); ?></div>
 						</div>
 
 						<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 							<div class="py-1 my-1 border-top border-bottom d-flex cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-								<div class="w-50"><?php _e( 'Coupon Discount', 'eca' ); ?>:</div>
-								<div class="w-50 font-weight-normal"><?php wc_cart_totals_coupon_html( $coupon ); ?></div>
+								<div class="w-75  pr-2"><?php _e( 'Coupon Discount', 'eca' ); ?>:</div>
+								<div class="w-25 font-weight-normal"><?php wc_cart_totals_coupon_html( $coupon ); ?></div>
 							</div>
 						<?php endforeach; ?>
 
@@ -122,10 +122,17 @@ font-size: 11px;
 
 						<?php endif; ?>
 
+						@if($shipping)
+							<div class="my-1 py-1 border-top border-bottom d-flex fee">
+								<div class="w-75  pr-2">{{$shipping->label}}</div>
+								<div class="w-25">{{$shipping->amount}}</div>
+							</div>
+						@endif
+
 						<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
 							<div class="border-bottom d-flex fee">
-								<div class="w-50"><?php echo esc_html( $fee->name ); ?></div>
-								<div class="w-50"><?php wc_cart_totals_fee_html( $fee ); ?></div>
+								<div class="w-75  pr-2"><?php echo esc_html( $fee->name ); ?></div>
+								<div class="w-25"><?php wc_cart_totals_fee_html( $fee ); ?></div>
 							</div>
 						<?php endforeach; ?>
 
@@ -148,11 +155,11 @@ font-size: 11px;
 						<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
 						<div class="d-flex order-total">
-							<div class="w-50 font-weight-bold"><?php _e( 'Total', 'woocommerce' ); ?></div>
-							<div class="w-50"><?php wc_cart_totals_order_total_html(); ?></div>
+							<div class="w-75  pr-2 font-weight-bold"><?php _e( 'Total', 'woocommerce' ); ?></div>
+							<div class="w-25"><?php wc_cart_totals_order_total_html(); ?></div>
 
-							<!-- <span class="dynamic_price"><?php //echo WC()->cart->total; //wc_cart_totals_order_total_html(); ?></span>
-							<strong><?php //echo get_woocommerce_currency_symbol(); ?></strong> -->
+							<!-- <span class="dynamic_price"><?php //echo WC()->cart->total; //wc_cart_totals_order_total_html(); ?></span> -->
+							<!-- <strong><?php //echo get_woocommerce_currency_symbol(); ?></strong> -->
 						</div>
 
 						<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>

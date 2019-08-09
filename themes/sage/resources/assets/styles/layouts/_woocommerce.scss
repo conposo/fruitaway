@@ -1,110 +1,98 @@
-.product-thumbnail {
-    max-width: 100%;
-    width: auto;
-    box-sizing: border-box;
-    text-align: center;
-    background: #fff;
-    overflow: hidden;
-    position: relative;
-    @include media-breakpoint-up(sm) {
-      height: 162px;
-    }
-  
-    // & img {
-    //   margin: auto;
-    //   top: 0;
-    //   bottom: 0;
-    //   left: 0;
-    //   right: 0;
-    //   width: 100%;
-    //   height: auto;
-    //   @include media-breakpoint-up(sm) {
-    //     position: absolute;
-    //   }
-    // }
-  }
+.woocommerce-breadcrumb {
+  text-transform: uppercase;
+  font-size: 10px;
+}
 
+.product-thumbnail {
+  // width: 100%;
+  max-width: 100%;
+  width: auto;
+  box-sizing: border-box;
+  text-align: center;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  @include media-breakpoint-up(lg) {
+    height: 162px;
+  }
+}
 
 .woocommerce.columns-3 {
-    li {   
-        @extend .col-6;
-        @extend .col-md-4;
-    }
+  li {
+    @extend .col-6;
+    @extend .col-md-4;
+  }
 }
 .woocommerce.columns-4 {
-    li {   
-        @extend .col-6;
-        @extend .col-md-3;
-    }
+  li {
+    @extend .col-6;
+    @extend .col-md-3;
+  }
 }
 
 .woocommerce.columns-3,
 .woocommerce.columns-4 {
+  &,
+  ul {
+    @extend .row;
+    @extend .m-0;
+    @extend .p-0;
 
-    ul {
-        @extend .row;
-        @extend .m-0;
-        @extend .p-0;
-        
-        @extend .text-center;
+    @extend .text-center;
 
-        list-style: none;
-        
-        li {
-            @extend .mb-5;
+    list-style: none;
 
-            h2 {
-                font-family: $montserrat;
-                font-size: 16px;
-                font-weight: 400;
-            }
+    li {
+      @extend .mb-5;
 
-            .price {
-                @extend .d-block;
-                @extend .my-4;
+      h2 {
+        font-family: $montserrat;
+        font-size: 15px;
+        font-weight: 400;
+        height: 38px;
+      }
 
-                font-size: 30px;
-                font-weight: 600;
-            }
-
-            a.button {
-                @extend .d-block;
-                @extend .w-100;
-                @extend .py-1;
-                @extend .text-white;
-                background-color: #FE3E49;
-                border-radius: 25px;
-
-                font-size: 9px;
-            }
+      .price {
+        @extend .d-block;
+        @extend .my-2;
+        font-size: 14px;
+        font-weight: 600;
+        @include media-breakpoint-up(sm) {
+          font-size: 18px;
         }
-    }
-}
+        @include media-breakpoint-up(lg) {
+          font-size: 23px;
+        }
+      }
 
-.single-product {
+      a.button {
+        @extend .d-block;
+        @extend .w-100;
+        @extend .py-1;
+        @extend .text-white;
+        background-color: #fe3e49;
+        border-radius: 25px;
 
-  .carousel-item {
-    img {
-      @include media-breakpoint-down(xs) {
-        width: 100%;
-        height: auto;
+        font-size: 9px;
       }
     }
   }
+}
 
-  h1 {
-      text-transform: uppercase;
-      text-align: center;
-      font-size: 13px;
-      line-height: 1;
-      font-weight: 400;
-      span {
-        text-transform: none;
-        display: block;
-        font-size: 22px;
-        line-height: 1.8;
-        font-weight: 700;
-      }
+body.single-product {
+  &:not(.page-template) h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 400;
+    span {
+      text-transform: none;
+      display: block;
+      font-size: 22px;
+      line-height: 1.8;
+      font-weight: 700;
+    }
     @include media-breakpoint-up(sm) {
       text-align: left;
       font-size: 18px;
@@ -116,11 +104,30 @@
 
     + p {
       margin: 45px 0;
+      font-size: 13px;
+    }
+  }
+}
+
+.single-product {
+  .carousel-item {
+    img {
+      width: 100%;
+      height: auto;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
   .whats_inside,
   .package {
+    img {
+      margin-bottom: 15px;
+      width: 100%;
+      height: auto;
+    }
     @include media-breakpoint-down(xs) {
       h3 {
         font-size: 16px;
@@ -143,34 +150,35 @@
     text-align: center;
     font-size: 13px;
     font-weight: 600;
-    @include media-breakpoint-up(sm){
+    @include media-breakpoint-up(sm) {
       text-align: left;
     }
   }
   .price {
     font-size: 28px;
     font-weight: 700;
-    @include media-breakpoint-up(sm){
+    @include media-breakpoint-up(sm) {
       font-size: 48px;
     }
   }
 
-  input[type="radio"], input[type="checkbox"] {
+  input[type="radio"],
+  input[type="checkbox"] {
     opacity: 0;
     display: block;
     width: 0;
     height: 0;
   }
-  
-  @include media-breakpoint-up(md){
+
+  @include media-breakpoint-up(lg) {
     .product-special-image {
       figure img {
-        position: absolute;
-        top: -80px;
+        position: relative;
+        // top: -80px;
         left: 0;
         bottom: 0;
-        height: 100%;
-        width: auto;
+        height: auto;
+        width: 100%;
         max-width: 1920px;
       }
     }
@@ -178,7 +186,7 @@
 
   .choices {
     padding: 5px;
-    background-color: #E6F8EE;
+    background-color: #e6f8ee;
     border-radius: 20px;
 
     .choice {
@@ -187,7 +195,7 @@
       border-radius: 20px;
 
       &.checked {
-        border: 2px dotted #2A191F;
+        border: 2px dotted #2a191f;
         label {
           span {
             font-weight: 600 !important;
@@ -210,21 +218,22 @@
       }
     }
   }
-  
-  .variations { // table
-    @include media-breakpoint-down(xs){
+
+  .variations {
+    // table
+    @include media-breakpoint-down(xs) {
       width: 100%;
       text-align: center;
     }
   }
 
   .select-choices {
-    background-color: #E6F8EE;
-    border: 2px dotted #2A191F;
+    background-color: #e6f8ee;
+    border: 2px dotted #2a191f;
     border-radius: 10px;
-    
+
     .custom-dropdown-toggle {
-      @include media-breakpoint-down(xs){
+      @include media-breakpoint-down(xs) {
         font-size: 10px;
       }
 
@@ -232,14 +241,14 @@
       cursor: pointer;
 
       span.toggle-dropdown {
-        background-color: #E6F8EE;
+        background-color: #e6f8ee;
         margin-top: -2px;
         margin-right: -10px;
         margin-bottom: -2px;
         display: block;
         width: 40px;
         height: 40px;
-        border: 2px dotted #2A191F;
+        border: 2px dotted #2a191f;
         border-radius: 10px;
       }
     }
@@ -250,7 +259,8 @@
 
   .single_variation_wrap {
     @extend .d-flex;
-    @extend .mt-md-5;
+    @extend .mt-md-4;
+    // @extend .mt-md-5;
 
     .woocommerce-variation-price {
       @extend .my-3;
@@ -258,7 +268,7 @@
     }
 
     .variations_button {
-      @include media-breakpoint-down(xs){
+      @include media-breakpoint-down(xs) {
         width: 100%;
         button {
           width: inherit;
@@ -298,6 +308,11 @@
         @extend .col-12;
         @extend .col-md-3;
         text-align: center;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
         h2 {
           font-size: 16px;
           font-weight: 400;
@@ -314,11 +329,11 @@
         a.button {
           display: block;
           width: 100%;
-          padding: $spacer*0.2 0;
+          padding: $spacer * 0.2 0;
           border-radius: 25px;
           font-size: 17px;
           color: $white;
-          background-color: #FE3E49;
+          background-color: #fe3e49;
         }
       }
     }

@@ -47,4 +47,10 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         echo '</div>';
     }, 10 );
 
+    add_action( 'woocommerce_checkout_after_order_review', function(){
+        echo '<div class="pt-3 pb-2 w-100 text-center" style="font-weight: 300; color:#272727; font-size:10px;">';
+        echo 'Всички цени са с включен ДДС';
+        echo '</div>';
+    }, 10 );
+
 }

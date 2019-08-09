@@ -193,7 +193,6 @@ if ( ! function_exists( 'print_attribute_radio_or_dropdown' ) ) {
             </label>
             </div>', $input_name, $esc_value, $id, $checked, $filtered_label, $weight, $rand_attribute, rand() );
         }
-        return 'print_attribute_radio_or_dropdown';
     }
 }  
 

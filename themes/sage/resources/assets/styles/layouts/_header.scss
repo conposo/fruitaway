@@ -1,24 +1,50 @@
 .banner .nav li {
   @extend .nav-item;
-  padding: 0.5rem 1rem;
+  @include media-breakpoint-up(lg) {
+    padding: 0.5rem;
+  }
+  @include media-breakpoint-up(xl) {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .banner .nav a {
   @extend .nav-link;
-  @extend .p-0;
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
   color: #2A191F;
 }
 
 .navbar {
-  font-size: $font-size-sm;
-  background: $white;
   z-index: 2;
 
-  @include media-breakpoint-up(md) {
-    .home & .navbar-brand img {
-      position: absolute;
+  @include media-breakpoint-up(lg) {
+    font-size: $font-size-sm;
+    background: $white;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: $font-size-sm;
+  }
+
+  .home & .navbar-brand img {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    @include media-breakpoint-up(md) {
       top: -5px;
-      left: 0;
+    }
+  }
+
+  .navbar-collapse {
+    @include media-breakpoint-down(md) {
+      ul {
+        margin-top: 30px;
+      }
+    }
+    @include media-breakpoint-only(md) {
+      margin-top: 0;
+      text-align: center;
     }
   }
 }
@@ -39,6 +65,7 @@
     height: 32px;
   }
 }
+
 .navbar {
   .blog &.categories .container, .category &.categories .container{
     border: 2px dashed $text-gray;
@@ -73,17 +100,19 @@
 }
 
 .navbar-brand img {
-  width: 115px;
   height: auto;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-down(md) {
+    width: 115px;
+  }
+  @include media-breakpoint-only(md) {
     width: 125px;
   }
 }
 
 #hidden-menu {
   top: -100px;
-  z-index: 1;
+  z-index: 999;
   padding: 0;
   height: 50px;
 
@@ -105,46 +134,33 @@
 
 .shown {
   top: 0 !important;
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
   -webkit-animation: show_hidden-menu 1s 1;
-  /* Safari 4.0 - 8.0 */
   animation: show_hidden-menu 1s 1;
 }
 
 .hide {
   top: -100px;
   -webkit-animation: hide_hidden-menu 1s 1;
-  /* Safari 4.0 - 8.0 */
   animation: hide_hidden-menu 1s 1;
 }
-
 @keyframes hide_hidden-menu {
   from {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    top: 0;
+      top: 0;
   }
   to {
-    top: -100px;
+      top: -100px;
   }
 }
 @keyframes show_hidden-menu {
   from {
-    opacity: 0;
-    top: -100px;
-    padding-top: 0;
-    padding-bottom: 0;
+      opacity: 0;
+      top: -100px;
   }
   50% {
-    opacity: .25;
-    padding-top: 2px;
-    padding-bottom: 6px;
+      opacity: .25;
   }
   to {
-    opacity: 1;
-    top: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
+      opacity: 1;
+      top: 0;
   }
 }

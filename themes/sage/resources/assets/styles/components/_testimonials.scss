@@ -21,11 +21,15 @@
     width: 100%;
     @extend .mx-auto;
   }
-
+  .carousel-control-prev, .carousel-control-next {
+    @include media-breakpoint-down(lg){
+      width: 5%;
+    }
+  }
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
     height: 100%;
-    @include media-breakpoint-up(md){
+    @include media-breakpoint-up(lg){
       width: 52px;
     }
   }

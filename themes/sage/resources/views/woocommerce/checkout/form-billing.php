@@ -18,14 +18,14 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="p-4 woocommerce-billing-fields">
+<div class="p-4 bg-success woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
 
 		<h3><?php esc_html_e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
 
 	<?php else : ?>
 
-		<h3><?php esc_html_e( '1. Данни за клиента', 'woocommerce' ); ?></h3>
+		<h3 class="pb-3 border-bottom"><?php esc_html_e( '1. Данни за клиента', 'shl' ); ?></h3>
 
 	<?php endif; ?>
 

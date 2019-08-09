@@ -35,7 +35,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
     {
         if( get_field('whats_inside_description') ):
         ?>
-        <div class="container mt-md-5 p-5 w-100 text-center whats_inside">
+        <div class="container _mt-md-5 px-5 w-100 text-center whats_inside">
             <h3 class="mt-md-5 pt-5"><?php echo get_field('whats_inside_title'); ?></h3>
             <p><?php echo get_field('whats_inside_description'); ?></p>
             <div class="row justify-content-center">
@@ -44,8 +44,8 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                     while ( have_rows('products') ) : the_row();
                         $image_id = get_sub_field('image');
                         ?>
-                        <div class="col-6 col-md-2">
-                        <?php echo wp_get_attachment_image( $image_id, 'thumbnail', "", array( "class" => "img-responsive" ) ); ?>
+                        <div class="col-6 col-sm-4 col-lg-2">
+                        <?php echo wp_get_attachment_image( $image_id, 'full', "", array( "class" => "img-responsive" ) ); ?>
                         <span class="d-block description"><?php the_sub_field('description'); ?></span>
                         </div>
                     <?php
@@ -65,7 +65,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                     while ( have_rows('package') ) : the_row();
                         $image_id = get_sub_field('image');
                         ?>
-                        <div class="col-6 col-md-2">
+                        <div class="col-6 col-sm-4 col-lg-2">
                         <?php if(get_sub_field('flip')) : ?>
                             <?php $image_flipped_side = get_sub_field('image_flipped_side'); ?>
                             <style>
@@ -110,17 +110,17 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                                 <div class="flip-card">
                                     <div class="flip-card-inner">
                                         <div class="flip-card-front">
-                                            <img src="<?php echo wp_get_attachment_image_url( $image_id, 'thumbnail' ); ?>" >
+                                            <img src="<?php echo wp_get_attachment_image_url( $image_id, 'full' ); ?>" >
                                         </div>
                                         <div class="flip-card-back">
-                                            <img src="<?php echo wp_get_attachment_image_url( $image_flipped_side, 'thumbnail' ); ?>" >
+                                            <img src="<?php echo wp_get_attachment_image_url( $image_flipped_side, 'full' ); ?>" >
                                         </div>
                                     </div>
                                 </div>
-                                <div style="opacity:0; position:relative; z-index:-1;"><img src="<?php echo wp_get_attachment_image_url( $image_id, 'thumbnail' ); ?>" ></div>
+                                <div style="opacity:0; position:relative; z-index:-1;"><img src="<?php echo wp_get_attachment_image_url( $image_id, 'full' ); ?>" ></div>
                             </div>
                         <?php else: ?>
-                            <?php echo wp_get_attachment_image( $image_id, 'thumbnail', "", array( "class" => "img-responsive" ) ); ?>
+                            <?php echo wp_get_attachment_image( $image_id, 'full', "", array( "class" => "img-responsive" ) ); ?>
                         <?php endif; ?>
                         <span class="d-block description"><?php the_sub_field('description'); ?></span>
                         </div>

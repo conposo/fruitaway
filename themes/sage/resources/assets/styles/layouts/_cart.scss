@@ -3,14 +3,17 @@
         @extend .container;
 
         ul.products {
-            @extend .d-flex;
-            @extend .m-0;
+            @extend .row;
+            @extend .mb-5;
             @extend .p-0;
 
             list-style: none;
 
             .product.type-product {
-                @extend .col-4;
+                @extend .col-12;
+                @extend .col-lg-6;
+                @extend .col-xl-4;
+                @extend .col-xxl-3;
 
                 text-align: center;
             }
@@ -30,20 +33,43 @@
                 font-weight: 300;
             }
         }
+
+        /* When the checkbox is checked, add a blue background */
+        input.custom:checked ~ .checkmark.custom_checkbox {
+            background-size: 100%;
+            background-position: center center;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOSIgaGVpZ2h0PSIyMyIgdmlld0JveD0iMCAwIDE5IDIzIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDojMjcyNzI3O2ZvbnQtc2l6ZToyM3B4O2ZvbnQtZmFtaWx5Oklvbmljb25zO308L3N0eWxlPjwvZGVmcz48dGV4dCBjbGFzcz0iYSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAyMCkiPjx0c3BhbiB4PSIwIiB5PSIwIj7vj748L3RzcGFuPjwvdGV4dD48L3N2Zz4=');
+        }
     }
+    
     .cart-collaterals {
-        .product {
+        li.product {
             img {
-                width: 100%;
-                height: auto;
+                // width: 100%;
+                // height: auto;
+                width: auto;
+                height: 100%;
+                max-height: 160px;
             }
             h2 {
+                overflow: hidden;
                 font-size: 16px;
                 font-weight: 400;
             }
             .price {
                 font-size: 23px;
                 font-weight: 700;
+            }
+            a.button {
+              display: block;
+              width: 100%;
+              padding: $spacer * 0.2 0;
+              border-radius: 25px;
+              font-size: 17px;
+              font-size: 9px;
+              color: $white;
+              background-color: #fe3e49;
             }
         }
     }

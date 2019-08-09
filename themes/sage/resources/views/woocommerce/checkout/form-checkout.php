@@ -26,25 +26,24 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) ) );
 	return;
 }
-
 ?>
 
 <div class="container checkout pt-4">
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout row flex-column-reverse flex-sm-row" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<form name="checkout" method="post" class="checkout woocommerce-checkout row __flex-column-reverse __flex-sm-row" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
 	<div class="col-12 col-sm-6 pb-5">
 
 		<h2 class="text-uppercase">
-			<?php _e('ЗАВЪРШИ ПОРЪЧКАТА', 'eca'); ?>
+			<?php _e('ЗАВЪРШИ ПОРЪЧКАТА', 'shl'); ?>
 		</h2>
 
 		<?php if ( $checkout->get_checkout_fields() ) : ?>
 
 			<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-			<div id="customer_details" class="pt-3 row">
-				<div class="mb-5 col-12">
+			<div id="customer_details" class="row">
+				<div class="pl-0 mb-5 col-12">
 					<?php do_action( 'woocommerce_checkout_billing' ); ?>
 				</div>
 
@@ -58,7 +57,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php endif; ?>
 		
 	</div>
-	<div class="mt-2 pt-4 col-12 col-sm-6">
+	<div class="pr-0 mt-2 pt-4 col-12 col-sm-6">
 		<div class="position-sticky order-summary" style="
     top: 30px;
 ">
@@ -69,7 +68,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			
 			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 
-			<div id="order_review" class="woocommerce-checkout-review-order">
+			<div id="order_review" class="border woocommerce-checkout-review-order">
 				<?php do_action( 'woocommerce_checkout_order_review' ); ?>
 			</div>
 

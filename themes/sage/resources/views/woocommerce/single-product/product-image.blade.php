@@ -38,16 +38,18 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	jQuery(document).ready(function(){
 		var lis = ``;
 		jQuery('#woo-product-gallery-carousel > div:first-child').addClass('active');
-		jQuery('#woo-product-gallery-carousel .carousel-item').each(function(i){
-			if(i == 0) active = 'active'; else active = ``;
-			lis += `<li
-						style="width:16px; height:16px;"
-						class="${active} mx-2 rounded-circle"
-						data-target="#carouselExampleCaptions"
-						data-slide-to="${i}"
-						></li>`
-		})
-		jQuery('#carouselExampleCaptions').prepend(`<ol class="carousel-indicators" style="<?php if(!wp_is_mobile()): ?>bottom: -100px;<?php else: ?>top: 100%;<?php endif; ?>">`+lis+`</ol>`)
+		if(jQuery('#woo-product-gallery-carousel .carousel-item').length > 1) {
+			jQuery('#woo-product-gallery-carousel .carousel-item').each(function(i){
+				if(i == 0) active = 'active'; else active = ``;
+				lis += `<li
+							style="width:16px; height:16px;"
+							class="${active} mx-2 rounded-circle"
+							data-target="#carouselExampleCaptions"
+							data-slide-to="${i}"
+							></li>`
+			})
+			jQuery('#carouselExampleCaptions').prepend(`<ol class="carousel-indicators" style="<?php if(!wp_is_mobile()): ?>bottom: 0-100px;<?php else: ?>top: 100%;<?php endif; ?>">`+lis+`</ol>`)
+		}
 	})
 	</script>
 	<figure id="woo-product-gallery-carousel" class="carousel-inner <?php if(!wp_is_mobile()): ?>h-100<?php endif; ?>" style="overflow: unset;">

@@ -22,13 +22,13 @@
             <div class="row flex-column-reverse flex-md-row pb-5">
                 <!-- Contact Form -->
                 @if( isset($contact_form_shortcode) && $contact_form_shortcode )
-                    <div class="col-12 col-md-6">
+                    <div class="mb-3 mb-lg-0 col-12 col-lg-6">
                         {!! do_shortcode($contact_form_shortcode) !!}
                         <!-- <div id="contact_form" class="d-flex">
                         </div> -->
                     </div>
                 @endif
-                <div class="mb-3 mb-md-0 col-12 col-md-6">
+                <div class="mb-3 mb-md-0 col-12 col-lg-6">
                     <div class="mb-3 contact-ctas">
                         @if($phone)
                         <a href="tel:0889600113">{{$phone->title}}</a><br>
@@ -44,7 +44,7 @@
                         <p>{!!$address->label!!}</p>
                         <p>{!!$address->text!!}</p>
                     </div>
-                    <div class="">
+                    <div>
                         {!! $address->map !!}
                     </div>
                 </div>

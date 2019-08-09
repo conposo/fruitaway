@@ -33,11 +33,11 @@ if ( post_password_required() ) {
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'mb-md-5 pb-md-5 row flex-md-row-reverse', $product);?>>
-    <div class="position-relative product-special-image col-12 col-md-6">
+    <div class="position-relative product-special-image col-12 col-lg-6">
 	<script>
 		jQuery(document).ready(function(){
 		<?php if(!wp_is_mobile()): ?>
-			jQuery('.product-special-image img').height( jQuery('.product-special-image').height() + 120 );
+			// jQuery('.product-special-image img').height( jQuery('.product-special-image').height() + 120 );
 		<?php else: ?>
 			jQuery('.product-special-image').prepend( jQuery('.product_title').clone() );
 			jQuery('.summary .product_title').hide();
@@ -55,7 +55,8 @@ if ( post_password_required() ) {
 	?>
     </div>
 
-	<div class="summary entry-summary col-12 col-md-6">
+	<div class="summary entry-summary col-12 col-lg-6 d-flex align-items-center">
+		<div>
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
@@ -71,6 +72,7 @@ if ( post_password_required() ) {
 		 */
 		do_action( 'woocommerce_single_product_summary' );
 		?>
+		</div>
 	</div>
 
 	<?php

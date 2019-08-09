@@ -1,6 +1,11 @@
 footer {
   font-family: $open-sans;
 
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+
   h3 {
     font-family: $open-sans;
     font-size: 16px !important;
@@ -10,6 +15,10 @@ footer {
 	
 	a {
     color: #2A191F;
+
+    i {
+      font-size: 20px;
+    }
 	}
 
   ul {

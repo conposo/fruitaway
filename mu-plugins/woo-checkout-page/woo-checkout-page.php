@@ -47,7 +47,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         unset($fields['billing_address_2']);
         unset($fields['billing_state']);
         unset($fields['billing_city']);
-        unset($fields['billing_phone']);
+        // unset($fields['billing_phone']);
         unset($fields['billing_postcode']);
         unset($fields['billing_country']);
         return $fields;

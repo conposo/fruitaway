@@ -49,11 +49,14 @@
                     var lis = ``;
                     jQuery('#woo-product-gallery-carousel > div:first-child').addClass('active');
 
-                    jQuery('#woo-product-gallery-carousel .carousel-item').each(function(i){
-                        if(i == 0) active = 'active'; else active = ``;
-                        lis += `<li style="width:16px; height:16px;" data-target="#carousel_images" data-slide-to="${i}" class="${active} mx-2 rounded-circle"></li>`
-                    })
-                    jQuery('#carousel_images').prepend(`<ol class="carousel-indicators" style="bottom: 0;">`+lis+`</ol>`)
+                    if(jQuery('#woo-product-gallery-carousel .carousel-item').length > 1) {
+                      jQuery('#woo-product-gallery-carousel .carousel-item').each(function(i){
+                          if(i == 0) active = 'active'; else active = ``;
+                          lis += `<li style="width:16px; height:16px;" data-target="#carousel_images" data-slide-to="${i}" class="${active} mx-2 rounded-circle"></li>`
+                      })
+                      jQuery('#carousel_images').prepend(`<ol class="carousel-indicators" style="bottom: 0;">`+lis+`</ol>`)
+                    }
+
                 })
                 </script>
                 <figure id="woo-product-gallery-carousel" class="m-0 carousel-inner h-100" style="overflow: unset;">
@@ -124,7 +127,7 @@
           @while( have_rows('items') ) @php the_row(); @endphp
             <div class="col-12 col-md-3">
                 <figure>
-                  {!! wp_get_attachment_image( get_sub_field('image'), 'thumbnail', '', ['class' => 'img-responsive'] ) !!}
+                  {!! wp_get_attachment_image( get_sub_field('image'), 'medium', '', ['class' => 'img-responsive'] ) !!}
                 </figure>
                 {!!get_sub_field('description')!!}
             </div>

@@ -13,6 +13,7 @@
 		p {
 			color:#2a191f;
 			font-size: 18px;
+			line-height: 1.2;
 
 			@include media-breakpoint-up(sm) {
 				font-size: 34px;
@@ -59,11 +60,9 @@
 }
 
 .template-box-with-fruits {
-
 	// product
-	h1 {
-		font-size: 22px !important;
-		font-weight: 700 !important;
+	h1 , p{
+		margin-bottom: 22px;
 	}
 
 	label,
@@ -75,9 +74,9 @@
 	tr {
 		@extend .d-flex;
 		@extend .flex-column;
-		@extend .mt-4;
-
+		
 		+ tr {
+			@extend .mt-4;
 			.choices {
 				> div {
 					position: relative;
@@ -125,6 +124,14 @@
 
 	p {
 		font-family: $montserrat;
+		font-size: 13px;
+	}
+
+	img.attachment-additional-product {
+		@include media-breakpoint-up(lg) {
+			width: auto;
+			height: 100%;
+		}
 	}
 
 	.woocommerce-product-details__short-description {
@@ -139,6 +146,9 @@
 	.page-header + a {
 		font-size: 9px;
 		@include media-breakpoint-up(sm) {
+			font-size: 16px;
+		}
+		@include media-breakpoint-up(lg) {
 			font-size: 20px;
 		}
 	}
@@ -167,15 +177,29 @@
 		height: auto;
 	}
 	a.button {
-		font-size: 17px !important;
+		font-size: 9px !important;
+		@include media-breakpoint-up(sm) {
+			font-size: 12px !important;
+        }
+        @include media-breakpoint-up(lg) {
+			font-size: 17px !important;
+        }
 	}
 }
 
 .template-subscription {
 
-	main img {
-		width: 100%;
-		height: auto;
+	main .product-thumbnail img {
+		@include media-breakpoint-down(lg) {
+			width: 100%;
+			height: auto;
+		}
+		width: auto;
+		height: 100%;
+	}
+
+	p {
+		font-size: 13px;
 	}
 
 	.carousel {
@@ -283,8 +307,16 @@
 	}
 	li.product {
 		img {
-			max-height: 200px;
+			margin-bottom: 10px;
 			width: auto;
+			max-width: 100%;
+			height: auto;
+			max-height: 200px;
+		}
+		h2 {
+			margin: 0;
+			font-size: 12px !important;
+			height: 42px !important;
 		}
 		a.button {
 			background-color: #FE3E49;

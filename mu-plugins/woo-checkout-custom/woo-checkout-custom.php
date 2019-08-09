@@ -23,15 +23,18 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
     add_action('woocommerce_after_checkout_billing_form', '_custom_checkout_send_as_gift_add_a_message_fields');
     function _custom_checkout_send_as_gift_add_a_message_fields() {
         ?>
-        <div>
-            <div class="d-flex justify-content-between">
-                <label for="send_as_gift" onclick="jQuery('#send_as_gift_wrapper').collapse('toggle')">
-                    <span>
-                        <input type="checkbox" id="send_as_gift" name="send_as_gift">
+        <div class="border-top">
+            <div class="mb-3 pt-3 d-flex justify-content-between">
+                <label class="m-0" for="send_as_gift" onclick="jQuery('#send_as_gift_wrapper').collapse('toggle')">
+                    <span class="d-flex align-items-center">
+                        <input type="checkbox" id="send_as_gift" class="custom" name="send_as_gift">
+                        <span class="checkmark custom_checkbox mr-2"></span>
                         ИЗПРАТИ КАТО ПОДАРЪК - Получателят ще бъде различен човек
                     </span>
                 </label>
-                <span class="w-auto" onclick="jQuery('#send_as_gift_more_info').collapse('toggle')"><i class="far fa-question-circle"></i></span>
+                <span class="w-auto" onclick="jQuery('#send_as_gift_more_info').collapse('toggle')">
+                    <i class="far fa-question-circle"></i>
+                </span>
             </div>
             <div class="collapse multi-collapse _show" id="send_as_gift_more_info">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem assumenda quos ipsum, doloremque dolor eaque quod voluptates obcaecati amet tempora reiciendis, eveniet iste maxime quam unde distinctio adipisci veniam ex.</p>
@@ -47,13 +50,18 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                 </label>
             </div>
         </div>
-        <div>
-            <div class="d-flex justify-content-between">
-                <label for="add_a_message" onclick="jQuery('#add_message_wrapper').collapse('toggle')">
-                    <input type="checkbox" id="add_a_message" name="add_a_message">
-                    Добави картичка с персонално послание (БЕЗПЛАТНО)
+        <div class="border-top">
+            <div class="pt-3 d-flex justify-content-between">
+                <label class="m-0" for="add_a_message" onclick="jQuery('#add_message_wrapper').collapse('toggle')">
+                    <span class="d-flex align-items-center">
+                        <input type="checkbox" id="add_a_message" class="custom" name="add_a_message">
+                        <span class="checkmark custom_checkbox mr-2"></span>
+                        Добави картичка с персонално послание (БЕЗПЛАТНО)
+                    </span>
                 </label>
-                <span class="w-auto" onclick="jQuery('#add_a_message_more_info').collapse('toggle')"><i class="far fa-question-circle"></i></span>
+                <span class="w-auto" onclick="jQuery('#add_a_message_more_info').collapse('toggle')">
+                    <i class="far fa-question-circle"></i>
+                </span>
             </div>
             <div class="collapse multi-collapse _show" id="add_a_message_more_info">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem assumenda quos ipsum, doloremque dolor eaque quod voluptates obcaecati amet tempora reiciendis, eveniet iste maxime quam unde distinctio adipisci veniam ex.</p>
@@ -69,21 +77,21 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
     add_action('f4y_print_invoice', '_custom_checkout_invoice_fields');
     function _custom_checkout_invoice_fields() {
         ?>
-        <div id="print_invoice" class="mb-5 p-4 checkout-card _border">
-            <h3>4. <?php _e('Данни за фактура', 'eca'); ?></h3>
+        <div id="print_invoice" class="mb-5 p-4 bg-success checkout-card _border">
+            <h3 class="pb-3 border-bottom">4. <?php _e('Данни за фактура', 'eca'); ?></h3>
             <?php
             $idonotneedinvoice =  __('Не желая фактура', 'f4y');
             $ineedinvoice =  __('Желая да ми бъде издадена фактура', 'f4y');
             ?>
             <label onclick="jQuery('#multiCollapseExample1').collapse('toggle')" class="my-4 d-flex flex-column align-items-start">
-                <span class="d-block">
+                <span class="d-flex align-items-center">
                     <input value="0" type="radio" id="" class="custom" name="with_invoice" checked>
                     <span class="checkmark mr-2"></span>
                     <?= $idonotneedinvoice; ?>
                 </span>
             </label>
             <label onclick="jQuery('#multiCollapseExample1').collapse('toggle')" class="my-4 d-flex flex-column align-items-start">
-                <span class="d-block">
+                <span class="d-flex align-items-center">
                     <input value="1" type="radio" id="" class="custom" name="with_invoice">
                     <span class="checkmark mr-2"></span>
                     <?= $ineedinvoice; ?>
@@ -123,6 +131,15 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                     'required'      => true
                 ));
                 ?>
+                <script>
+                    jQuery(document).ready(function(){
+                        jQuery('#eca_DDS').addClass('custom')
+                        jQuery('#eca_DDS').after('<span class="checkmark custom_checkbox mr-2"></span>')
+                    })
+                </script>
+                <style>
+                    
+                </style>
             </div>
         </div>
         <?php

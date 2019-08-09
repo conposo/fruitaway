@@ -8,8 +8,18 @@ class Home extends Controller
 {
     protected $acf = true;
 
-    public static function the_query($category_nicename)
+    public static function the_query($cat = '')
     {
-        return new \WP_Query('category_name=' . $category_nicename . '&showposts=5&order=ASC');
+        $args = [
+            'showposts' => 4,
+            'order' => 'DESC',
+            'orderby' => 'ID',
+        ];
+        if($cat != '')
+        {
+            $args['cat'] = $cat;
+        }
+        // dd($args);
+        return new \WP_Query($args);
     }
 }

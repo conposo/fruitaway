@@ -16,7 +16,7 @@
       @if( isset($categories) && $categories )
         <ul class="border-0 nav nav-tabs" id="myTab" role="tablist">
           @foreach( $categories as $term_id )
-            @php $term = get_term_by('id', $term_id, 'product_cat'); @endphp
+            @php $term = get_term_by('id', $term_id->category, 'product_cat'); @endphp
             <li class="nav-item mr-4">
               <a class="px-0 border-0 bg-transparent nav-link <?php if(!isset($active)) $active = 1; if($active++ == 1) echo 'active'; ?>" id="<?= $term->slug ?>-tab" data-toggle="tab" href="#{{ $term->slug }}" role="tab" aria-controls="{{get_term_link( $term )}}" aria-selected="true">
                 {{$term->name}}
@@ -39,11 +39,11 @@
           @if( isset($categories) && $categories )
             <div class="tab-content" id="productsTabs">
               @foreach( $categories as $term_id )
-                @php $term = get_term_by('id', $term_id, 'product_cat'); @endphp
+                @php $term = get_term_by('id', $term_id->category, 'product_cat'); @endphp
                 <div id="{{ $term->slug }}"
                     class="tab-pane fade <?php if(!isset($_active)) $_active = 1; if($_active++ == 1) echo 'active show'; ?>"
                     role="tabpanel" aria-labelledby="{{ $term->slug }}-tab">
-                  @php $term = get_term_by('id', $term_id, 'product_cat'); @endphp
+                  @php $term = get_term_by('id', $term_id->category, 'product_cat'); @endphp
                   {!! do_shortcode("[products category='$term->slug' columns=3]") !!}
                 </div>
               @endforeach

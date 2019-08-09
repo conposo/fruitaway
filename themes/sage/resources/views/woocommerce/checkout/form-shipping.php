@@ -18,10 +18,10 @@
 
 defined( 'ABSPATH' ) || exit;
 ?>
-<div class="p-4 woocommerce-shipping-fields">
+<div class="px-4 pt-4 pb-1 bg-success woocommerce-shipping-fields">
 	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
 
-		<h3 id="ship-to-different-address">
+		<h3 class="pb-3 border-bottom" id="ship-to-different-address">
 			2. Данни за доставката
 			<label class="d-none woocommerce-form__label woocommerce-form__label-for-checkbox checkbox">
 				<input id="ship-to-different-address-checkbox" class="woocommerce-form__input woocommerce-form__input-checkbox input-checkbox" <?php checked( apply_filters( 'woocommerce_ship_to_different_address_checked', 'shipping' === get_option( 'woocommerce_ship_to_destination' ) ? 1 : 0 ), 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" /> <span><?php esc_html_e( 'Ship to a different address?', 'woocommerce' ); ?></span>
@@ -48,11 +48,11 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php endif; ?>
 </div>
-<div class="p-4 woocommerce-additional-fields">
+<div class="px-4 pb-1 bg-success woocommerce-additional-fields">
 	<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 	<script>
 	jQuery(document).ready(function(){
-		jQuery('#order_comments').attr('rows', 4)
+		jQuery('#order_comments').attr('rows', 2)
 	})
 	</script>
 	<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', 'yes' === get_option( 'woocommerce_enable_order_comments', 'yes' ) ) ) : ?>

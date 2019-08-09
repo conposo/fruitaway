@@ -191,18 +191,11 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         // var_dump($product_id);
         // die;
         $product_id = apply_filters( 'woocommerce_add_to_cart_product_id', $product_id );
-        // $readirect_to_cart = get_post_meta( $product_id, '_my_custom_field', true );
         
         $_pf = new \WC_Product_Factory();  
         $_product = $_pf->get_product($product_id);
         // var_dump($_product);
         // die;
-        
-        // if( has_term( ['redirect_to_card'], 'product_tag', $product_id ) )
-        // {
-        //     $url = wc_get_cart_url();
-        // }
-        // if( $readirect_to_cart || $_product->is_type('variable') ) {}
         if( $_product->is_type('variable') )
         {
             $url = wc_get_cart_url();
@@ -225,6 +218,13 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
     //     }
     // });
 
+    /**
+     * Remove scripts on Checkout Page
+     */
+    add_action( 'wp_enqueue_scripts', function(){
+        wp_dequeue_script( 'wc-checkout' );
+    });
+    
 }
 
 add_filter( 'the_content', function( $content ) {

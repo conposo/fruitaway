@@ -3,7 +3,15 @@ html,
 body {
     font-family: $montserrat;
     background-color: #fff;
-    overflow-x: hidden;
+    
+    &.template-box-with-fruits,
+    &.template-subscription,
+    &.single-product {
+        overflow-x: hidden;
+        main {
+            // overflow-x: hidden;
+        }
+    }
 }
 
 h1,
@@ -25,7 +33,7 @@ h1 {
         text-align: center;
     }
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         font-size: 36px;
         .blog &, .category & {
             text-align: left;

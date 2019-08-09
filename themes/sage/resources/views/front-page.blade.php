@@ -25,7 +25,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-lg-6 pt-3 pt-md-0 image">
+                            <div class="col-lg-6 pt-lg-3 pt-md-0 image">
                                 @php
                                     $image_id = get_sub_field('image');
                                 @endphp
@@ -42,6 +42,11 @@
         
         <script>
         jQuery('#one_page_scroll').onepage_scroll({
+            afterMove: function(index) {
+                if(index == 3) {
+                    console.log(index);
+                }
+            },
             sectionContainer: 'section',
             loop: false,
             updateURL: false,

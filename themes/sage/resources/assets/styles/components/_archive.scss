@@ -1,6 +1,13 @@
-
 .blog,
 .category {
+
+	.alm-reveal {
+		@extend .row;
+		@extend .px-0;
+		@extend .container;
+		@extend .mx-auto;
+	}
+
 	main .navbar {
 		li {
             @include media-breakpoint-down(xs) {

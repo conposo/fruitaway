@@ -1,5 +1,5 @@
 
-    <div class="testimonials-wrapper mb-5 mb-md-0 py-5 bg-success container-fluid position-relative">
+    <div class="testimonials-wrapper _mb-5 mb-md-0 py-5 bg-success container-fluid position-relative">
     @php
         $testimonials = App::get(App::testimonialsNumber());
     @endphp
@@ -20,14 +20,14 @@
                     @while($testimonials->have_posts()) @php $testimonials->the_post(); @endphp
                     <div class="carousel-item @if($counter == 1) active @endif">
                         <div class="row flex-column flex-md-row align-items-center">
-                            <div class="pr-0 col-12 col-md-3 text-center text-md-right">
+                            <div class="mb-3 mb-lg-0 pr-lg-0 col-12 col-md-3 text-center text-md-right">
                                 @if( $_image = get_post_thumbnail_id( get_the_ID() ) )
-                                <figure class="m-0 text-left">
+                                <figure class="m-0 text-center text-lg-left">
                                     {!! wp_get_attachment_image( $_image, [165, 165], '', ['class' => 'rounded-circle border h-auto'] ) !!}
                                 </figure>
                                 @endif
                             </div>
-                            <div class="pl-0 col-12 col-md-9 d-flex flex-column justify-content-center text-center text-md-left">
+                            <div class="col-12 col-md-9 d-flex flex-column justify-content-center text-center text-md-left">
                                 <p class="order-2 order-md-1">
                                     {!! get_the_content() !!}
                                 </p>

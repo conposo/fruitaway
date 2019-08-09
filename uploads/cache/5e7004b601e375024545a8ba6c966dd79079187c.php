@@ -10,7 +10,7 @@
       <?php if( isset($categories) && $categories ): ?>
         <ul class="border-0 nav nav-tabs" id="myTab" role="tablist">
           <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $term_id): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <?php $term = get_term_by('id', $term_id, 'product_cat'); ?>
+            <?php $term = get_term_by('id', $term_id->category, 'product_cat'); ?>
             <li class="nav-item mr-4">
               <a class="px-0 border-0 bg-transparent nav-link <?php if(!isset($active)) $active = 1; if($active++ == 1) echo 'active'; ?>" id="<?= $term->slug ?>-tab" data-toggle="tab" href="#<?php echo e($term->slug); ?>" role="tab" aria-controls="<?php echo e(get_term_link( $term )); ?>" aria-selected="true">
                 <?php echo e($term->name); ?>
@@ -34,11 +34,11 @@
           <?php if( isset($categories) && $categories ): ?>
             <div class="tab-content" id="productsTabs">
               <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $term_id): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                <?php $term = get_term_by('id', $term_id, 'product_cat'); ?>
+                <?php $term = get_term_by('id', $term_id->category, 'product_cat'); ?>
                 <div id="<?php echo e($term->slug); ?>"
                     class="tab-pane fade <?php if(!isset($_active)) $_active = 1; if($_active++ == 1) echo 'active show'; ?>"
                     role="tabpanel" aria-labelledby="<?php echo e($term->slug); ?>-tab">
-                  <?php $term = get_term_by('id', $term_id, 'product_cat'); ?>
+                  <?php $term = get_term_by('id', $term_id->category, 'product_cat'); ?>
                   <?php echo do_shortcode("[products category='$term->slug' columns=3]"); ?>
 
                 </div>
