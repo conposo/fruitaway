@@ -3,8 +3,8 @@
  * Plugin Name: F4Y Checkout Custom Fields Woocommerce
  * Description: A plugin that edit Woocommerce Defaults
  * Version: 0.1
- * Author: eCommerceAcademy
- * Author URI: http://ecommercebg.com
+ * Author: Sholekov
+ * Author URI: http://sholekov.com
  * License: GPL2
  */
 
@@ -22,6 +22,32 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
 
     add_action('woocommerce_after_checkout_billing_form', '_custom_checkout_send_as_gift_add_a_message_fields');
     function _custom_checkout_send_as_gift_add_a_message_fields() {
+        $gift_title = 'ИЗПРАТИ КАТО ПОДАРЪК - Получателят ще бъде различен човек';
+        $gift_hint = 'Избирайки опцията “ИЗПРАТИ КАТО ПОДАРЪК" имате възможност да укажете друго лице, което да получи доставката, като ние няма да му изпратим никакви документи за плащане, цени на продуктите и т.н.';
+        $gift_fields['names'] = 'Име и Фамилия на получателя на подаръка';
+        $gift_fields['phone'] = 'Телефон на получателя';
+
+        $card_title = 'Добави картичка с персонално послание (БЕЗПЛАТНО)';
+        $card_hint = 'Добавете послание, към вашия подарък. Ние ще го изпишем ръчно върху специална луксозна картичка, която ще прикачим върху вашата кошница.';
+        $card_field_label = 'Вашето послание';
+        if(get_locale() == 'bg_BG') {
+            $gift_title = 'ИЗПРАТИ КАТО ПОДАРЪК - Получателят ще бъде различен човек';
+            $gift_hint = 'Избирайки опцията “ИЗПРАТИ КАТО ПОДАРЪК" имате възможност да укажете друго лице, което да получи доставката, като ние няма да му изпратим никакви документи за плащане, цени на продуктите и т.н.';
+            $gift_fields['names'] = 'Име и Фамилия на получателя на подаръка';
+            $gift_fields['phone'] = 'Телефон на получателя';
+            $card_title = 'Добави картичка с персонално послание (БЕЗПЛАТНО)';
+            $card_hint = 'Добавете послание, към вашия подарък. Ние ще го изпишем ръчно върху специална луксозна картичка, която ще прикачим върху вашата кошница.';
+            $card_field_label = 'Вашето послание';
+        }
+        if(get_locale() == 'en_US') {
+            $gift_title = 'ИЗПРАТИ КАТО ПОДАРЪК - Получателят ще бъде различен човек';
+            $gift_hint = 'Избирайки опцията “ИЗПРАТИ КАТО ПОДАРЪК" имате възможност да укажете друго лице, което да получи доставката, като ние няма да му изпратим никакви документи за плащане, цени на продуктите и т.н.';
+            $gift_fields['names'] = 'Име и Фамилия на получателя на подаръка';
+            $gift_fields['phone'] = 'Телефон на получателя';
+            $card_title = 'Добави картичка с персонално послание (БЕЗПЛАТНО)';
+            $card_hint = 'Добавете послание, към вашия подарък. Ние ще го изпишем ръчно върху специална луксозна картичка, която ще прикачим върху вашата кошница.';
+            $card_field_label = 'Вашето послание';
+        }
         ?>
         <div class="border-top">
             <div class="mb-3 pt-3 d-flex justify-content-between">
@@ -29,7 +55,9 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                     <span class="d-flex align-items-center">
                         <input type="checkbox" id="send_as_gift" class="custom" name="send_as_gift">
                         <span class="checkmark custom_checkbox mr-2"></span>
-                        ИЗПРАТИ КАТО ПОДАРЪК - Получателят ще бъде различен човек
+                        <div style="flex-basis: 90%;">
+                            <?= $gift_title ?>
+                        </div>
                     </span>
                 </label>
                 <span class="w-auto" onclick="jQuery('#send_as_gift_more_info').collapse('toggle')">
@@ -37,15 +65,15 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                 </span>
             </div>
             <div class="collapse multi-collapse _show" id="send_as_gift_more_info">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem assumenda quos ipsum, doloremque dolor eaque quod voluptates obcaecati amet tempora reiciendis, eveniet iste maxime quam unde distinctio adipisci veniam ex.</p>
+                <p><?= $gift_hint ?></p>
             </div>
             <div class="collapse multi-collapse _show" id="send_as_gift_wrapper">
                 <label for="names">
-                    <span class="d-block">Име и Фамилия на получателя на подаръка</span>
+                    <span class="d-block"><?= $gift_fields['names'] ?></span>
                     <input class="d-block w-100" type="text" name="receiver_names">
                 </label>
                 <label for="phone">
-                    <span class="d-block">Телефон на получателя</span>
+                    <span class="d-block"><?= $gift_fields['phone'] ?></span>
                     <input class="d-block w-100" type="text" name="receiver_phone">
                 </label>
             </div>
@@ -56,7 +84,9 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                     <span class="d-flex align-items-center">
                         <input type="checkbox" id="add_a_message" class="custom" name="add_a_message">
                         <span class="checkmark custom_checkbox mr-2"></span>
-                        Добави картичка с персонално послание (БЕЗПЛАТНО)
+                        <div style="flex-basis: 90%;">
+                            <?= $card_title ?>
+                        </div>
                     </span>
                 </label>
                 <span class="w-auto" onclick="jQuery('#add_a_message_more_info').collapse('toggle')">
@@ -64,10 +94,10 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                 </span>
             </div>
             <div class="collapse multi-collapse _show" id="add_a_message_more_info">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem assumenda quos ipsum, doloremque dolor eaque quod voluptates obcaecati amet tempora reiciendis, eveniet iste maxime quam unde distinctio adipisci veniam ex.</p>
+                <p><?= $card_hint ?></p>
             </div>
             <div class="collapse multi-collapse _show" id="add_message_wrapper">
-                <span class="d-block">Вашето послание</span>
+                <span class="d-block"><?= $card_field_label ?></span>
                 <textarea name="message" id="" cols="30" rows="4"></textarea>
             </div>
         </div>
@@ -76,13 +106,33 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
 
     add_action('f4y_print_invoice', '_custom_checkout_invoice_fields');
     function _custom_checkout_invoice_fields() {
-        ?>
-        <div id="print_invoice" class="mb-5 p-4 bg-success checkout-card _border">
-            <h3 class="pb-3 border-bottom">4. <?php _e('Данни за фактура', 'eca'); ?></h3>
-            <?php
+        $title = '4. Данни за фактура';
+        $Company_name = 'Фирма';
+        $VAT = 'ЕИК';
+        $Address = 'Адрес';
+        $EU_VAT_identification_label = 'Регистрация по ДДС';
+        $EU_VAT_identification_number = 'Номер по ЗДДС:';
+        if(get_locale() == 'bg_BG') {
+            $title = '4. Данни за фактура';
             $idonotneedinvoice =  __('Не желая фактура', 'f4y');
             $ineedinvoice =  __('Желая да ми бъде издадена фактура', 'f4y');
-            ?>
+            $Company_name = 'Фирма';
+            $VAT = 'ЕИК';
+            $Address = 'Адрес';
+            $EU_VAT_identification_label = 'Регистрация по ДДС';
+        }
+        if(get_locale() == 'en_US') {
+            $title = '4. Invoice';
+            $idonotneedinvoice =  __('I do not need invoice', 'f4y');
+            $ineedinvoice =  __('I need invoice', 'f4y');
+            $Company_name = 'Company name';
+            $VAT = 'VAT';
+            $Address = 'Address';
+            $EU_VAT_identification_label = 'Has VAT number';
+        }
+        ?>
+        <div id="print_invoice" class="mb-5 p-4 bg-success checkout-card _border">
+            <h3 class="pb-3 border-bottom"><?= $title ?></h3>
             <label onclick="jQuery('#multiCollapseExample1').collapse('toggle')" class="my-4 d-flex flex-column align-items-start">
                 <span class="d-flex align-items-center">
                     <input value="0" type="radio" id="" class="custom" name="with_invoice" checked>
@@ -102,7 +152,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                 woocommerce_form_field( 'eca_company_name', array(
                     'type'          => 'text',
                     'class'         => array('mb-3 p-0'),
-                    'label'         => __('Company name', 'eca'),
+                    'label'         => $Company_name,
                     'placeholder'   => __(''),
                     'required'      => true
                 ));
@@ -110,7 +160,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                 woocommerce_form_field( 'eca_EIK', array(
                     'type'          => 'text',
                     'class'         => array('mb-3 p-0'),
-                    'label'         => __('VAT', 'eca'),
+                    'label'         => $VAT,
                     'placeholder'   => __(''),
                     'required'      => true
                 ));
@@ -118,7 +168,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                 woocommerce_form_field( 'eca_address', array(
                     'type'          => 'text',
                     'class'         => array('mb-3 p-0'),
-                    'label'         => __('Address', 'eca'),
+                    'label'         => $Address,
                     'placeholder'   => __(''),
                     'required'      => true
                 ));
@@ -126,7 +176,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                 woocommerce_form_field( 'eca_DDS', array(
                     'type'          => 'checkbox',
                     'class'         => array('mb-3 p-0'),
-                    'label'         => __('EU VAT identification number', 'eca'),
+                    'label'         => $EU_VAT_identification_label,
                     'placeholder'   => __(''),
                     'required'      => true
                 ));

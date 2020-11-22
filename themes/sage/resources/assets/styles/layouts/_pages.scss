@@ -214,11 +214,17 @@
 	.product-special-image .carousel-item img {
 		height: auto;
 		@include media-breakpoint-up(sm) {
-			position: absolute;
-			top: -80px;
+			// position: absolute;
+			// top: -80px;
+			// left: 0;
+			// bottom: 0;
+			// width: auto !important;
+			position: relative;
+			// top: -80px;
 			left: 0;
 			bottom: 0;
-			width: auto !important;
+			height: auto;
+			width: 100%;
 			max-width: 1920px;
 		}
 	}

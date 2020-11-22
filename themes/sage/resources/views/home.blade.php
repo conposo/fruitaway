@@ -30,8 +30,24 @@
                     </div>
                 </div>
 
-                {!! do_shortcode('[ajax_load_more post_format="standard" exclude="'.$posts_ids.'" id="23141325425" container_type="div" max_pages="1" posts_per_page="4" images_loaded="true" button_label="'.__('Load more articles', 'f4y').'"]') !!}
+                @php
+                $btn_label = __('Load more articles', 'f4y');
+                if(get_locale() == 'bg_BG') {
+                    $btn_label = 'Виж още';
+                }
+                if(get_locale() == 'en_US') {
+                    $btn_label = 'Load more articles';
+                }
+                @endphp
 
+                {!! do_shortcode('[ajax_load_more post_format="standard" exclude="'.$posts_ids.'" id="23141325425" container_type="div" max_pages="1" posts_per_page="4" images_loaded="true" button_label="'.$btn_label.'"]') !!}
+
+                <style type="text/css" media="screen">
+                	.more.done {
+	                	display: none;
+                	}
+                </style>
+                
             </div><!-- #content -->
         </div><!-- #primary -->
         <?php //get_sidebar( 'content' ); ?>

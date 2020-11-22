@@ -20,11 +20,21 @@ defined( 'ABSPATH' ) || exit;
 if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
 }
+
+$title = '3. Данни за плащане';
+if(get_locale() == 'bg_BG') {
+	$title = '3. Данни за плащане';
+}
+if(get_locale() == 'en_US') {
+	$title = '3. Payments data';
+}
 ?>
-<div id="payment" class="woocommerce-checkout-payment">
+<div id="payment" class="woocommerce-checkout-payment" style="
+    margin-left: -15px;
+">
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<div class="mb-5 p-4 bg-success">
-			<h3 class="pb-3 border-bottom">3. Данни за плащане</h3>
+			<h3 class="pb-3 border-bottom"><?php echo $title; ?></h3>
 			<ul class="wc_payment_methods payment_methods methods">
 				<?php
 				if ( ! empty( $available_gateways ) ) {
@@ -51,6 +61,16 @@ if ( ! is_ajax() ) {
 		<?php wc_get_template( 'checkout/terms.php' ); ?>
 
 		<?php do_action( 'woocommerce_review_order_before_submit' ); ?>
+		
+		<?php		
+		$label = __('ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y');
+		if(get_locale() == 'bg_BG') {
+			$label = 'ЗАВЪРШИ ПОРЪЧКАТА >';
+		}
+		if(get_locale() == 'en_US') {
+			$label = 'COMPLETE PURCHASE';
+		}
+		?>
 
 		<?php echo apply_filters( 'woocommerce_order_button_html', '
 				<button
@@ -58,7 +78,7 @@ if ( ! is_ajax() ) {
 					class="mt-3 mx-auto btn-deco btn-deco-red button alt"
 					type="submit"
 					name="woocommerce_checkout_place_order"
-					__value="' . __( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y' ) . '" __data-value="' . __( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y' ) . '"><span class="position-relative">' . __( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y' ) . '</span></button>' ); // @codingStandardsIgnoreLine ?>
+					__value="' . $label . '" __data-value="' . $label . '"><span class="position-relative">' . $label . '</span></button>' ); // @codingStandardsIgnoreLine ?>
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 

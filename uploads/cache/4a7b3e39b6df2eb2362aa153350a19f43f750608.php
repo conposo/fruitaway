@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<div class="col-12 <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 							<div class="border-top row">
 								<div class="px-0 col-6 product-name">
-									<div class="d-flex justify-content-start align-items-center">
+									<div class="d-flex flex-column flex-md-row justify-content-start align-items-center">
 										<?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_name(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
 									</div>
 								</div>
@@ -95,12 +95,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<form class="woocommerce-coupon-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 			<?php if ( wc_coupons_enabled() ) { ?>
 				<div class="coupon under-proceed d-flex">
-					<label for="promo_code" class="d-block" onclick="jQuery('#promo_code_wrapper').collapse('toggle')">
-						<span class="d-block mb-2" style="font-weight: 300; font-size: 13px;">
+					<label for="promo_code" class="d-block">
+						<span class="d-block mb-2" style="font-weight: 300; font-size: 13px;" onclick="jQuery('#promo_code_wrapper').collapse('toggle')">
 							<span class="d-flex align-items-center">
 								<input type="checkbox" id="promo_code" class="custom" name="promo_code">
 								<span class="checkmark custom_checkbox mr-2"></span>
-								<?php esc_attr_e( 'Въведи промокод', 'eca' ); ?>
+								<?php 
+								$promo = __('Въведи промокод', 'f4y');
+								if(get_locale() == 'bg_BG') {
+									$promo = 'Въведи промокод';
+								}
+								if(get_locale() == 'en_US') {
+									$promo = 'Promo code';
+								}
+								?>
+								<?php echo e($promo); ?>
+
 							</span>
 						</span>
 						<div id="promo_code_wrapper" class="collapse multi-collapse">
@@ -109,7 +119,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 background: #FE3E49;
 " class="text-dark button apply_coupon text-white" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" >
 								<?php //esc_attr_e( 'Apply coupon', 'eca' ); ?>
-								<?php _e( 'Приложи', 'eca' ); ?>
+								<?php 
+								$apply = __('Приложи', 'f4y');
+								if(get_locale() == 'bg_BG') {
+									$Apply = 'Приложи';
+								}
+								if(get_locale() == 'en_US') {
+									$apply = 'Apply';
+								}
+								?>
+								<?php echo e($apply); ?>
+
 							</button>
 						</div>
 					</label>
@@ -146,7 +166,7 @@ background: #FE3E49;
 
 			<?php endif; ?>
 
-			<?php if($shipping): ?>
+			<?php if(false && $shipping): ?>
 				<div class="my-1 py-1 border-top border-bottom d-flex fee">
 					<div class="w-50  pr-2"><?php echo e($shipping->label); ?></div>
 					<div class="w-50"><?php echo e($shipping->amount); ?></div>

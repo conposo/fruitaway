@@ -19,9 +19,19 @@
                                     @if( $heading = get_sub_field('heading') )
                                         <h1 class="mb-3 mb-md-4">{{ $heading }}</h1>
                                     @endif
+
+            @php
+            $see_more_label =__( 'виж повече', 'f4y' );
+            if(get_locale() == 'bg_BG') {
+                $see_more_label = 'виж повече';
+            }
+            if(get_locale() == 'en_US') {
+                $see_more_label = 'More';
+            }
+            @endphp
                                     <p class="mb-3 mb-md-4 d-block">{{ get_sub_field('text') }}</p>
                                     <a class="text-uppercase btn-deco btn-deco-green" href="{{ get_sub_field('cta') }}">
-                                        <span class="position-relative">{{ __('виж повече', 'f4y') }}</span>
+                                        <span class="position-relative">{{$see_more_label}}</span>
                                     </a>
                                 </div>
                             </div>

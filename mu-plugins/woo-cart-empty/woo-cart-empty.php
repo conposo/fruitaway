@@ -3,8 +3,8 @@
  * Plugin Name: F4Y Empty Cart Woocommerce
  * Description: A plugin that edit Woocommerce Defaults
  * Version: 0.1
- * Author: eCommerceAcademy
- * Author URI: http://ecommercebg.com
+ * Author: Sholekov
+ * Author URI: http://sholekov.com
  * License: GPL2
  */
 

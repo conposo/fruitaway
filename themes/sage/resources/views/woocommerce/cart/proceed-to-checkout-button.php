@@ -20,9 +20,18 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+// esc_html_e( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'woocommerce' );
+$label = __('ЗАВЪРШИ ПОРЪЧКАТА >', 'f4y');
+if(get_locale() == 'bg_BG') {
+	$label = 'ЗАВЪРШИ ПОРЪЧКАТА >';
+}
+if(get_locale() == 'en_US') {
+	$label = 'Proceed to checkout';
+}
 ?>
 
 <a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="btn-deco btn-deco-red checkout-button button alt wc-forward">
 	<?php //esc_html_e( 'Proceed to checkout', 'woocommerce' ); ?>
-	<span class="position-relative"><?php esc_html_e( 'ЗАВЪРШИ ПОРЪЧКАТА >', 'woocommerce' ); ?></span>
+	<span class="position-relative text-uppercase"><?php echo $label ?></span>
 </a>

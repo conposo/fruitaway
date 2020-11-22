@@ -3,7 +3,7 @@
  * Plugin Name: Woocommerce Change Item Quantity AJAX
  * Description: A plugin that edit Woocommerce Defaults
  * Version: 0.1
- * Author: eCommerceAcademy
+ * Author: Sholekov
  * Author URI: http://sholekov.com
  * License: GPL2
  */

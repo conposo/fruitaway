@@ -36,14 +36,19 @@ if ( post_password_required() ) {
     <div class="position-relative product-special-image col-12 col-lg-6">
 	<script>
 		jQuery(document).ready(function(){
-		<?php if(!wp_is_mobile()): ?>
-			// jQuery('.product-special-image img').height( jQuery('.product-special-image').height() + 120 );
-		<?php else: ?>
-			jQuery('.product-special-image').prepend( jQuery('.product_title').clone() );
-			jQuery('.summary .product_title').hide();
-		<?php endif; ?>
+			<?php if(wp_is_mobile()): ?>
+				jQuery('.product-special-image').prepend( jQuery('.product_title').clone() );
+				jQuery('.summary .product_title').hide();
+				jQuery('h1 + p').css({'font-size' : '10px', 'padding' : '10px'})
+				jQuery('h1 + p').addClass('mt-4 mb-5')
+				jQuery('form.cart').append( jQuery('h1 + p').clone() );
+				jQuery('h1 + p').hide();
+			<?php else: ?>
+				// jQuery('.product-special-image img').height( jQuery('.product-special-image').height() + 120 );
+			<?php endif; ?>
 		});
 	</script>
+
 	<?php
 	/**
 	 * Hook: woocommerce_before_single_product_summary.
@@ -57,6 +62,7 @@ if ( post_password_required() ) {
 
 	<div class="summary entry-summary col-12 col-lg-6 d-flex align-items-center">
 		<div>
+		<?php do_action('woo_custom_breadcrumb');  ?>
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.

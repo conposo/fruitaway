@@ -17,9 +17,19 @@
                                     <?php if( $heading = get_sub_field('heading') ): ?>
                                         <h1 class="mb-3 mb-md-4"><?php echo e($heading); ?></h1>
                                     <?php endif; ?>
+
+            <?php
+            $see_more_label =__( 'виж повече', 'f4y' );
+            if(get_locale() == 'bg_BG') {
+                $see_more_label = 'виж повече';
+            }
+            if(get_locale() == 'en_US') {
+                $see_more_label = 'More';
+            }
+            ?>
                                     <p class="mb-3 mb-md-4 d-block"><?php echo e(get_sub_field('text')); ?></p>
                                     <a class="text-uppercase btn-deco btn-deco-green" href="<?php echo e(get_sub_field('cta')); ?>">
-                                        <span class="position-relative"><?php echo e(__('виж повече', 'f4y')); ?></span>
+                                        <span class="position-relative"><?php echo e($see_more_label); ?></span>
                                     </a>
                                 </div>
                             </div>

@@ -211,3 +211,13 @@
 @endif
 
 @include('partials.hidden-menu')
+
+@if( get_field('gift_baskets', 'option') != get_the_ID() )
+<script>
+	jQuery( "a.woocommerce-LoopProduct-link.woocommerce-loop-product__link" ).css('cursor', 'default');
+	jQuery( "a.woocommerce-LoopProduct-link.woocommerce-loop-product__link" ).click(function( event ) {
+        event.preventDefault();
+        console.log(5);
+	});
+</script>
+@endif

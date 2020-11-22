@@ -39,8 +39,8 @@
 <script>
   jQuery(document).ready(function(){
     jQuery('a.navbar-brand.brand').width( jQuery('.brand img').width() )
-    if(jQuery(window).width() > 1200) {
-      // jQuery('#go_to_cart').width( jQuery('.brand img').width() )
+    if(jQuery(window).height() > 768) {
+      jQuery('.brand img').width('150')
     }
   });
 </script>

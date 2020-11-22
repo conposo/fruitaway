@@ -22,7 +22,7 @@
                         <div class="row flex-column flex-md-row align-items-center">
                             <div class="mb-3 mb-lg-0 pr-lg-0 col-12 col-md-3 text-center text-md-right">
                                 <?php if( $_image = get_post_thumbnail_id( get_the_ID() ) ): ?>
-                                <figure class="m-0 text-center text-lg-left">
+                                <figure class="<?php if(wp_is_mobile()): ?> w-50 <?php endif; ?> mx-auto m-0 text-center text-lg-left">
                                     <?php echo wp_get_attachment_image( $_image, [165, 165], '', ['class' => 'rounded-circle border h-auto'] ); ?>
 
                                 </figure>

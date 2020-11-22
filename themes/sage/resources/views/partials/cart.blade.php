@@ -78,7 +78,16 @@
 							<div class="d-none coupon under-proceed d-flex">
 								<label for="" class="d-block">
 									<span class="d-block mb-2" style="font-weight: 300; font-size: 13px;">
-										<?php esc_attr_e( 'Въведи промокод', 'f4y' ); ?>
+										@php 
+										$promo = __('Въведи промокод', 'f4y');
+										if(get_locale() == 'bg_BG') {
+											$promo = 'Въведи промокод';
+										}
+										if(get_locale() == 'en_US') {
+											$promo = 'Promo code';
+										}
+										@endphp
+										{{$promo}}
 									</span>
 									<input style="border: 2px solid rgba(238, 238, 238, 1);" type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php //esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> 
 									<button type="submit" style="
@@ -86,7 +95,16 @@ background: #FE3E49;
 font-size: 13px;
 " class="text-dark button apply_coupon text-white" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>" >
 										<?php //esc_attr_e( 'Apply coupon', 'eca' ); ?>
-										<?php _e( 'Приложи', 'f4y' ); ?>
+										@php 
+										$apply = __('Приложи', 'f4y');
+										if(get_locale() == 'bg_BG') {
+											$Apply = 'Приложи';
+										}
+										if(get_locale() == 'en_US') {
+											$apply = 'Apply';
+										}
+										@endphp
+										{{$apply}}
 									</button>
 								</label>
 							</div>
@@ -122,7 +140,7 @@ font-size: 13px;
 
 						<?php endif; ?>
 
-						@if($shipping)
+						@if(false && $shipping)
 							<div class="my-1 py-1 border-top border-bottom d-flex fee">
 								<div class="w-75  pr-2">{{$shipping->label}}</div>
 								<div class="w-25">{{$shipping->amount}}</div>
@@ -173,7 +191,15 @@ font-size: 13px;
 		</div>
 
 <div class="mt-5 customadditional-button text-center">
-	<?php $order_button_text = __( 'ПОРЪЧАЙ >', 'f4y' ); ?>
+	<?php
+	$order_button_text = __( 'ПОРЪЧАЙ >', 'f4y' );
+	if(get_locale() == 'bg_BG') {
+		$order_button_text = 'ПОРЪЧАЙ';
+	}
+	if(get_locale() == 'en_US') {
+		$order_button_text = 'Order';
+	}
+	?>
 	<?php echo apply_filters( 'woocommerce_order_button_html', '<a href="'.wc_get_checkout_url().'" class="px-5 btn-deco btn-deco-red button alt px-0" ><span class="position-relative">' . esc_html( $order_button_text ) . '</span></a>' ); // @codingStandardsIgnoreLine ?>
 </div>
 

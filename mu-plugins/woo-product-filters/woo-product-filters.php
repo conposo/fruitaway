@@ -3,8 +3,8 @@
  * Plugin Name: F4Y Product Filters Woocommerce
  * Description: A plugin that edit Woocommerce Defaults
  * Version: 0.1
- * Author: eCommerceAcademy
- * Author URI: http://ecommercebg.com
+ * Author: Sholekov
+ * Author URI: http://sholekov.com
  * License: GPL2
  */
 
@@ -67,6 +67,13 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
 
 
     add_filter( 'woocommerce_get_price_html', function ( $price, $instance ){
+        $price_with_vat = __('Цена с ДДС', 'f4y');
+        if(get_locale() == 'bg_BG') {
+            $price_with_vat = 'Цена с ДДС';
+        }
+        if(get_locale() == 'en_US') {
+            $price_with_vat = 'Price with VAT';
+        }
         // var_dump(get_field('gift_baskets', 'option'), $instance->is_type( 'variation' ), $instance->get_type(), $instance->is_type( 'variable' ));
         if( $instance->is_type( 'variable' ) )
         {
@@ -97,14 +104,21 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         } // ref for this if() - https://stackoverflow.com/questions/47727653/get-the-product-variation-related-to-default-attribute-values-in-woocommerce
         else if ( !is_admin() && !is_page(get_field('gift_baskets', 'option')) && $instance->is_type( 'variation' ) )
         {
-            $price = '<span class="d-block price-label">'.__('Цена', 'f4y').'</span>' . $price;
+            $price = '<span class="d-block price-label">'.$price_with_vat.'</span>' . $price;
         }
         return apply_filters( 'woocommerce_get_price', $price );
     }, 100, 2 );
 
 
     add_filter('woocommerce_product_single_add_to_cart_text', function() {
-        return __('Поръчай', 'woocommerce');
+        $label = __('Поръчай', 'woocommerce');
+        if(get_locale() == 'bg_BG') {
+            $label = 'Поръчай';
+        }
+        if(get_locale() == 'en_US') {
+            $label = 'Order';
+        }
+        return $label;
     });
 
 
@@ -114,7 +128,14 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
     add_filter( 'woocommerce_loop_add_to_cart_link', function( $button, $product  ) {
         if(is_page_template( 'templates/gift-baskets-template.php' ) || is_page(65))
         {
-            $button_text = __('Виж повече >', 'f4y');
+            $label = __('Виж повече >', 'f4y');
+            if(get_locale() == 'bg_BG') {
+                $label = 'Виж повече >';
+            }
+            if(get_locale() == 'en_US') {
+                $label = 'See more >';
+            }
+            $button_text = $label;
             $button = '<a class="button" href="' . $product->get_permalink() . '">' . $button_text . '</a>';
         }
         return $button;

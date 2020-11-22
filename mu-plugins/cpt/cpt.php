@@ -3,8 +3,8 @@
  * Plugin Name: ECA Custom Post Types
  * Description: A plugin that set needed theme Custom Post Types
  * Version: 0.1
- * Author: eCommerceAcademy
- * Author URI: http://ecommercebg.com
+ * Author: Sholekov
+ * Author URI: http://sholekov.com
  * License: GPL2
  */
 

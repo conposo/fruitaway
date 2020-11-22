@@ -3,8 +3,8 @@
  * Plugin Name: F4Y Checkout Page Woocommerce
  * Description: A plugin that edit Woocommerce Defaults
  * Version: 0.1
- * Author: eCommerceAcademy
- * Author URI: http://ecommercebg.com
+ * Author: Sholekov
+ * Author URI: http://sholekov.com
  * License: GPL2
  */
 
@@ -55,6 +55,13 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
 
     add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
     function custom_override_checkout_fields( $fields ) {
+        $additional_info = 'Допълнителна информация';
+        if(get_locale() == 'bg_BG') {
+            $additional_info = 'Допълнителна информация';
+        }
+        if(get_locale() == 'en_US') {
+            $additional_info = 'Additional info';
+        }
         unset($fields['shipping']['shipping_first_name']);    
         unset($fields['shipping']['shipping_last_name']);  
         unset($fields['shipping']['shipping_company']);
@@ -69,7 +76,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         $fields['shipping']['shipping_address_1']['priority'] = 70;
         $fields['shipping']['shipping_city']['priority'] = 50;
         
-        $fields['order']['order_comments']['label'] = __('Допълнителна информация', 'f4y');
+        $fields['order']['order_comments']['label'] = $additional_info;
         $fields['order']['order_comments']['placeholder'] = '';
 
         return $fields;

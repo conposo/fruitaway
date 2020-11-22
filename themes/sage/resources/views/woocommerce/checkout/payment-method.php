@@ -24,8 +24,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="mb-3">
 		<label class="m-0 d-flex align-items-center" onclick="jQuery('.payment_box').hide(); jQuery('.payment_method_<?php echo esc_attr( $gateway->id ); ?>').show()" for="payment_method_<?php echo esc_attr( $gateway->id ); ?>">
 			<input id="payment_method_<?php echo esc_attr( $gateway->id ); ?>" type="radio" class="custom m-0 input-radio" name="payment_method" value="<?php echo esc_attr( $gateway->id ); ?>" <?php checked( $gateway->chosen, true ); ?> data-order_button_text="<?php echo esc_attr( $gateway->order_button_text ); ?>" />
-			<span class="checkmark mr-2"></span>
-			<?php echo $gateway->get_title(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?> <?php echo $gateway->get_icon(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?>
+			<span class="checkmark mr-2" style="flex-basis: 20px;"></span>
+			<div id="" style="
+    flex-basis: 90%;
+    overflow: hidden;
+">
+				<?php echo $gateway->get_title(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?>
+				<div id="">
+					 <?php echo $gateway->get_icon(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?>
+				</div>
+			</div>
 		</label>
 	</div>
 

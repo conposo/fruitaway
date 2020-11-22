@@ -3,8 +3,8 @@
  * Plugin Name: F4Y Product Actions Woocommerce
  * Description: A plugin that edit Woocommerce Defaults
  * Version: 0.1
- * Author: eCommerceAcademy
- * Author URI: http://ecommercebg.com
+ * Author: Sholekov
+ * Author URI: http://sholekov.com
  * License: GPL2
  */
 
@@ -36,7 +36,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         if( get_field('whats_inside_description') ):
         ?>
         <div class="container _mt-md-5 px-5 w-100 text-center whats_inside">
-            <h3 class="mt-md-5 pt-5"><?php echo get_field('whats_inside_title'); ?></h3>
+            <h3 class=""><?php echo get_field('whats_inside_title'); ?></h3>
             <p><?php echo get_field('whats_inside_description'); ?></p>
             <div class="row justify-content-center">
                 <?php
@@ -59,7 +59,7 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
         <div class="container w-100 text-center package">
             <h3 class="mt-md-5 pt-5"><?php echo get_field('package_title'); ?></h3>
             <p><?php echo get_field('package_description'); ?></p>
-            <div class="row justify-content-md-center">
+            <div class="my-5 row justify-content-center">
                 <?php
                 if( have_rows('package') ):
                     while ( have_rows('package') ) : the_row();

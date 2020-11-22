@@ -17,6 +17,17 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+// $section_1 = get_field('section_1');
+// $title = $section_1['title'];
+
+$title = '1. Данни за клиента';
+if(get_locale() == 'bg_BG') {
+	$title = '1. Данни за клиента';
+}
+if(get_locale() == 'en_US') {
+	$title = '1. Clients data';
+}
 ?>
 <div class="p-4 bg-success woocommerce-billing-fields">
 	<?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) : ?>
@@ -25,7 +36,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php else : ?>
 
-		<h3 class="pb-3 border-bottom"><?php esc_html_e( '1. Данни за клиента', 'shl' ); ?></h3>
+		<h3 class="pb-3 border-bottom"><?php echo $title; ?></h3>
 
 	<?php endif; ?>
 

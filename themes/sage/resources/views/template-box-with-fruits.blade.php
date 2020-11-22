@@ -35,3 +35,9 @@
 
   @endwhile
 @endsection
+
+<style>
+p.price {
+  display: none;
+}
+</style>

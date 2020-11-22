@@ -3,8 +3,8 @@
  * Plugin Name: ECA Woo Apply coupon Redirect to Checkout
  * Description: A plugin that make needed woocommerce-checkout-change-items
  * Version: 0.1
- * Author: eCommerceAcademy
- * Author URI: http://ecommercebg.com
+ * Author: Sholekov
+ * Author URI: http://sholekov.com
  * License: GPL2
  */
 

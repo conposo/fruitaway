@@ -15,7 +15,7 @@
     <section id="primary" class="content-area">
         <div class="container" role="main">
             <div class="row">
-                <div class="col py-3 py-md-5">
+                <div class="col py-3 pt-md-5">
                     <h1>{!!get_the_title()!!}</h1>
                 </div>
             </div>

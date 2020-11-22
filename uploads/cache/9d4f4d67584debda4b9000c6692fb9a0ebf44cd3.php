@@ -233,3 +233,13 @@
 <?php endif; ?>
 
 <?php echo $__env->make('partials.hidden-menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php if( get_field('gift_baskets', 'option') != get_the_ID() ): ?>
+<script>
+	jQuery( "a.woocommerce-LoopProduct-link.woocommerce-loop-product__link" ).css('cursor', 'default');
+	jQuery( "a.woocommerce-LoopProduct-link.woocommerce-loop-product__link" ).click(function( event ) {
+        event.preventDefault();
+        console.log(5);
+	});
+</script>
+<?php endif; ?>

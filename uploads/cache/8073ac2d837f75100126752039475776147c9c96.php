@@ -19,12 +19,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$title = __( 'ДОБАВИ ЕКСТРИ:', 'woocommerce' );
+if(get_locale() == 'bg_BG') {
+	$title = 'ДОБАВИ ЕКСТРИ:';
+}
+if(get_locale() == 'en_US') {
+	$title = 'ADD EXTRAS:';
+}
+
 if ( $cross_sells ) : ?>
 
 	<div class="__cross-sells">
 
 		<!-- <h2><?php _e( 'You may be interested in&hellip;', 'woocommerce' ); ?></h2> -->
-		<h2><?php _e( 'ДОБАВИ ЕКСТРИ:', 'woocommerce' ); ?></h2>
+		<h2><?php echo e($title); ?></h2>
 
 		<?php woocommerce_product_loop_start(); ?>
 

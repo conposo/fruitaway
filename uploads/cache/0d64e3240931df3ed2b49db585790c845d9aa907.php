@@ -19,7 +19,7 @@
                     <?php
                         setup_postdata($post);
                     ?>
-                    <div class="fruit text-center col-4 col-md-2">
+                    <div class="fruit text-center col-4 col-md-2 mx-auto">
                         <div class="mb-4 product-thumbnail">
                             <?php if( has_post_thumbnail() ): ?>
                                 <?php the_post_thumbnail( 'additional-product' ); ?>

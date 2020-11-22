@@ -1,8 +1,27 @@
 <!--Hidden menu-->
+
 <?php
+$box_with_fruits =__( 'Кутия със сезонни плодове', 'f4y' );
+$subscribe =__( 'Абонаментна доставка на сезонни плодове', 'f4y' );
+$choose_and_order =__( 'ИЗБЕРИ И ПОРЪЧАЙ', 'f4y' );
+$make_ =__( 'НАПРАВИ ЗАПИТВАНЕ', 'f4y' );
+if(get_locale() == 'bg_BG') {
+    $box_with_fruits = 'Кутия със сезонни плодове';
+    $subscribe = 'АБОНАМЕНТ ЗА ДОСТАВКА НА КУТИЯ ПЛОДОВЕ';
+    $choose_and_order = 'ИЗБЕРИ И ПОРЪЧАЙ';
+    $make_ = 'НАПРАВИ ЗАПИТВАНЕ';
+}
+if(get_locale() == 'en_US') {
+    $box_with_fruits = 'Fruit boxes';
+    $subscribe = 'SUBSCRIPTION TO OUR FRUIT BOX DELIVERY';
+    $choose_and_order = ' CHOOSE AND ORDER';
+    $make_ = 'SEND REQUEST';
+}
+
 // dd( get_field('do_it_yourself', 'option') );
 // dd( !is_cart(), !is_checkout(), !is_page( get_field('do_it_yourself', 'option') ) );
 ?>
+
 <?php if( !is_cart() && !is_checkout() && !is_page( get_field('do_it_yourself', 'option') ) ): ?>
 <script>
 jQuery(document).ready(function() {
@@ -57,18 +76,18 @@ jQuery(window).scroll(function() {
             <?php echo App::logo('regular', 'print'); ?>
 
             <?php if(get_the_ID() == get_field('box_with_fruits', 'option')): ?>
-                <div class="headline ml-3">Кутия със сезонни плодове</div>
+                <div class="headline ml-3"><?php echo e($box_with_fruits); ?></div>
             <?php elseif(get_the_ID() == get_field('subscription', 'option')): ?>
-                <div class="headline ml-3">Абонаментна доставка на сезонни плодове</div>
+                <div class="headline ml-3"><?php echo e($subscribe); ?></div>
             <?php endif; ?>
         </div>
         <?php if(get_the_ID() == get_field('box_with_fruits', 'option')): ?>
             <a class="d-flex justify-content-center align-items-center btn-deco btn-deco-red" href="#top">
-                <span class="position-relative">ИЗБЕРИ И ПОРЪЧАЙ</span>
+                <span class="position-relative"><?php echo e($choose_and_order); ?></span>
             </a>
         <?php elseif(get_the_ID() == get_field('subscription', 'option')): ?>
             <a class="d-flex justify-content-center align-items-center btn-deco btn-deco-red" href="#contact_form">
-                <span class="position-relative">НАПРАВИ ЗАПИТВАНЕ</span>
+                <span class="position-relative"><?php echo e($make_); ?></span>
             </a>
         <?php endif; ?>
     </div>

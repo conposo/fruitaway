@@ -19,6 +19,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$title = ' ';
+if(get_locale() == 'bg_BG') {
+	$title = ' ';
+}
+if(get_locale() == 'en_US') {
+	$title = ' ';
+}
+
 do_action( 'woocommerce_before_checkout_form', $checkout );
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
@@ -47,7 +55,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 					<?php do_action( 'woocommerce_checkout_billing' ); ?>
 				</div>
 
-				<div class="mb-5 col-12">
+				<div class="pl-0 mb-5 col-12">
 					<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 				</div>
 			</div>

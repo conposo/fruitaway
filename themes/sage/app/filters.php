@@ -121,17 +121,21 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
 
     if( is_page() || !is_product() ) {
         /**
-         * Remove product price
+         * Move product price
          */
         remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+        add_action( 'woocommerce_before_add_to_cart_form', function() {
+            add_action( 'woocommerce_before_single_variation', 'woocommerce_template_single_price', 10 );
+        } );
     }
+
 
     /*
     * Print Short Description for Product with Variations // (for now only for "Box with seasoned fruits" but without condition)
     */
     remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );    
     add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 30 );
-    
+
     add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
         return array(
         'width' => 1024,
@@ -144,13 +148,20 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
      * Change some Breadcrumbs settings
      */
     add_filter( 'woocommerce_breadcrumb_defaults', function() {
+        $home = _x( 'Начало', 'breadcrumb', 'woocommerce' );
+        if(get_locale() == 'bg_BG') {
+            $home = 'Начало';
+        }
+        if(get_locale() == 'en_US') {
+            $home = 'Home';
+        }
         return array(
             'delimiter'   => ' > ',
-            'wrap_before' => '<nav class="mt-4 py-2 шейш-кззеиъьяе woocommerce-breadcrumb" itemprop="breadcrumb">',
+            'wrap_before' => '<nav class="d-none d-md-block mt-4 py-2 шейш-кззеиъьяе woocommerce-breadcrumb" itemprop="breadcrumb">',
             'wrap_after'  => '</nav>',
             'before'      => '',
             'after'       => '',
-            'home'        => _x( 'Начало', 'breadcrumb', 'woocommerce' ),
+            'home'        => $home,
         );
     });
 
@@ -158,6 +169,16 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
      * Change Buttons Text
      */
     add_filter( 'woocommerce_product_add_to_cart_text' , function () {
+        $add_to_basket_label = __( '+ ДОБАВИ В КОШНИЦАТА', 'woocommerce' );
+        $see_more_label =__( 'Виж повече >', 'f4y' );
+        if(get_locale() == 'bg_BG') {
+            $add_to_basket_label = '+ ДОБАВИ В КОШНИЦАТА';
+            $see_more_label = 'Виж повече >';
+        }
+        if(get_locale() == 'en_US') {
+            $add_to_basket_label = '+ ADD TO BASKET';
+            $see_more_label = 'More >';
+        }
         global $product;
         $product_type = $product->get_type();
         switch ( $product_type ) {
@@ -168,10 +189,10 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
                 return __( 'View products', 'woocommerce' );
             break;
             case 'simple':
-                return __( '+ ДОБАВИ В КОШНИЦАТА', 'woocommerce' );
+                return $add_to_basket_label;
             break;
             case 'variable':
-                return __( 'Виж повече >', 'woocommerce' );
+                return $see_more_label;
             break;
             default:
                 return __( 'Read more', 'woocommerce' );
@@ -224,7 +245,13 @@ if ( is_plugin_active_for_network($plugin_woo) || is_plugin_active( $plugin_woo 
     add_action( 'wp_enqueue_scripts', function(){
         wp_dequeue_script( 'wc-checkout' );
     });
-    
+
+    //Reposition WooCommerce breadcrumb function woocommerce_remove_breadcrumb(){
+    remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+    // add_action('woocommerce_before_main_content', 'woocommerce_remove_breadcrumb');
+    add_action( 'woo_custom_breadcrumb', function(){
+        woocommerce_breadcrumb();
+    });
 }
 
 add_filter( 'the_content', function( $content ) {
@@ -252,4 +279,23 @@ add_filter( 'the_content', function( $content ) {
 
     return $formatted_content;
 });
+
+
+
+add_filter( 'woocommerce_cross_sells_orderby', function( $orderby ){
+    $orderby = 'menu_order';
+    return $orderby;
+  }, 10, 1 );
+
+
+add_filter( 'woocommerce_cross_sells_order', function( $order ){
+    $order = 'ASC';
+    return $order;
+  }, 10, 1 );
+
+
+add_filter( 'woocommerce_cross_sells_total', function( $total ){
+    $total = '10';
+    return $total;
+  }, 10, 1 );
 
